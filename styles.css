@@ -10,6 +10,7 @@
     --white: rgb(255, 255, 255);
     --black-currant: rgb(14, 5, 15); 
     --hero-bg-overlay: rgb(14, 5, 15, 0.7);
+    --navibar-bg-transparent: rgb(45, 22, 116, 0.08);
     --darker-blue-primary: rgb(45, 22, 116);
     --darker-blue-primary-transparent: rgb(45, 22, 116, 0.5);
     --light-purple-primary: rgb(146, 113, 194);
@@ -31,7 +32,7 @@ html, body {
 header {
     position: relative;
     overflow: hidden;
-    height: 680px;
+    height: 730px;
     width: 100%;
     background-image: url("Images/Content/hanny-naibaho-aWXVxy8BSzc-unsplash(1).jpg");
     background-repeat: no-repeat;
@@ -51,7 +52,7 @@ header {
     position: absolute;
     background-color: var(--hero-bg-overlay);
     width: 100%;
-    height: 680px;
+    height: 730px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -70,6 +71,15 @@ ul, li {
 .hero-wrapper {
     position: relative;
     width: 100%;
+    margin-top: 6.5rem;
+    animation-name: heroWrapperCpy;
+    animation-duration: 2s;
+    margin-bottom: 25rem;
+}
+
+@keyframes heroWrapperCpy {
+    0% {margin-bottom: 25rem;}
+    100% {margin-bottom: 0px;}
 }
 
 .hero-welcome-heading {
@@ -92,7 +102,7 @@ ul, li {
 
 /*Start of Welcome Pitch Box*/
 .welcome-pitch-wrapper {
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.4);
     border-radius: 15px;
     padding: 2rem;
     display: grid;
@@ -240,73 +250,87 @@ ul, li {
 
 /* Navigation bar*/
 .space {
-    padding: 16px;
-    padding-bottom: 0px;
-    border:1px rgb(111, 0, 128);
-    height: 60px;
+    z-index: 10;
+    background-color: rgb(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
-    flex-direction: row;
-    position: relative;
-    background-color: none;
+    padding-inline: 55px;
+    padding-bottom: 0px;
+    gap: 17rem;
 }
 
-.navibar-menu-space > img {
-    height: 100%;
-    color: var(--white);
-    object-fit: cover;
-    width: 70px;
-}
-
-.navibar-menu-space{
-    font-family: monospace;
-    color: var(--white);
+.logo-wrapper {
     display: flex;
     justify-content: center;
-    align-items:center;
-    width: 350px;
-    margin-right: 300px;
-    gap: 30px;
+    align-items: center;
     width: fit-content;
 }
 
-.navibar-user-space {
-    position: relative;
+.logo {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
 }
 
-.navibar-user-space>img {
-position:relative;
-display: inline-flex;
-top:8px;
-margin-top: 1px;} 
+.logo-name {
+    font-family: var(--ff-Jaldi);
+    font-size: 20px;
+    color: white;
+    width: max-content;
+}
 
+.search-and-user-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-and-user-wrapper {
+    width: fit-content;
+}
 
 .search-bar-wrapper {
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .search-bar-wrapper i {
     position: absolute;
-    right: 30px;
-    top: 16px;
 }
 
-#searchEl
-{
+.openSearchEl {
     background-color: var(--darker-blue-primary-transparent);
-    border-radius: 5px;
-    padding: 5px;
-    float: right;
     border: none;
     padding: 12px;
-    margin-top: 8px;
-    margin-right: 16px;
+    font-size: 17px;
+    height: 15px;
+    width: 15px;
+    color: white;
+    border-radius: 50%;
+}
+
+.search-bar-new-icon {
+    position: absolute;
+}
+
+.newSearchEl {
+    background-color: var(--darker-blue-primary-transparent);
+    border-radius: 150px;
+    border: none;
+    padding: 12px;
     font-size: 17px;
     height: 10px;
     color: white;
+}
+
+.newSearchEl:focus {
+    outline: none;
 }
 
 #searchEl::placeholder {
@@ -314,7 +338,50 @@ margin-top: 1px;}
     font-size: 13px;
 }
 
-a{color: var(--white)}  
+.navibar-menu-space {
+    font-family: monospace;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.navibar-user-space i {
+    font-size: 22px;
+}
+
+.navibar-user-space {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: max-content;
+}
+
+.navibar-menu-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    font-family: var(--ff-Istok-Web);
+}
+
+.navibar-menu-list-item {
+    width: max-content;
+}
+
+.navibar-menu-list-item a, .login-btn {
+    color: white;
+}
+
+.navibar-menu-list-item a:visited, .login-btn:visited {
+    color: white;
+}
+
+.navibar-menu-list-item a:focus {
+    color: var(--light-purple-primary);
+    outline: none;
+}
 
 
 
@@ -457,9 +524,9 @@ img {
 
 .fotn-container-two {
     display: grid;
-    place-content: start;
     gap: 1rem;
-    height: 100%;
+    place-content: start;
+    position: relative;
 }
 
 .fotn-card-three {
@@ -477,11 +544,16 @@ img {
 }
 
 .music-play-button {
+    display: none;
     position: absolute;
     bottom: 50px;
     background-color: white;
     border-radius: 0px 150px 150px 0px;
     border: none;
+}
+
+#play-btn {
+    display: block;
 }
 
 .music-play-button i {
@@ -493,58 +565,50 @@ img {
 .fotn-card-four {
     position: relative;
     display: flex;
-    gap: 1rem;
-    outline: var(--outline);
+    justify-content: space-between;
+    height: 390px;
+    width: 470px;
 }
 
 .fotn-card-upcoming-wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
+    height: 390px;
 }
 
 .fotn-card-upcoming-wrapper img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
+
 /* More from FrontEnd Soundz */
 
-  .col1 {
+  .column{
     float: left;
     width: 50%;
-    padding: 10px 10px;
-    position: absolute;
-    } 
-  
-  .col1 {
-    float: left;
-    width: 50%;
-    outline:var(--outline);
-    height:500px;
-    flex: 50%;
-    flex-direction: row;
-    background-color: white;
-    padding: 10px 10px ;
-    } 
+    background-color:white;}
 
-   .col1 img
-    { 
-     margin-top: 8px;
-    vertical-align: middle;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    
-    
-   } 
-    
+.column h2{
+    color: black; 
+  
+  }
+
+  .column p{
+    color: black; }
+
+  .column img {
+    height: 200px;
+    width: 300px;
+      }
+  
+  
   /* Clear floats after the columns */
-   .row1-space:after {
+  .row:after {
     content: "";
     display: table;
     clear: both;
-    outline: var(--outline);
-    display:flex;
-  } 
+    margin: none;
+    padding: none;
+  }
