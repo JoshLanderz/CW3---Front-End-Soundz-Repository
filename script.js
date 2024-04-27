@@ -1,14 +1,15 @@
+//Fresh On The Net - Play Button
 let song = document.getElementById("song");
-let ctrlIcon = document.getElementById("ctrlIcon");
+let playIcon = document.getElementById("playIcon");
 
 function playPause(){
-    if(ctrlIcon.classList.contains("fa-pause")){
+    if(playIcon.classList.contains("fa-pause")){
         song.pause();
-        ctrlIcon.classList.remove("fa-pause");
-        ctrlIcon.classList.add("fa-play");
+        playIcon.classList.remove("fa-pause");
+        playIcon.classList.add("fa-play");
     } else {
         song.play();
-        ctrlIcon.classList.add("fa-pause");
-        ctrlIcon.classList.remove("fa-play");
+        playIcon.classList.add("fa-pause");
+        playIcon.classList.remove("fa-play");
     }
 }
