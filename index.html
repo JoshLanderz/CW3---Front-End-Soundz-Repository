@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/b5390d3db8.js" crossorigin="anonymous"></script>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jaldi:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jaldi:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
 </head>
 <body>
@@ -21,34 +21,38 @@
 
      <div class="space">
         
-        <div class="navibar-menu-space">
-                
-            <img src="https://github.com/JoshLanderz19/CW3---Front-End-Soundz-Repository/blob/main/FrontEnd%20Soundz%20Logo.png?raw=true" alt="FrontEnd Soundz logo">
-            
+        <div class="logo-wrapper">
+            <img class="logo" src="https://github.com/JoshLanderz19/CW3---Front-End-Soundz-Repository/blob/main/FrontEnd%20Soundz%20Logo.png?raw=true" alt="FrontEnd Soundz logo">
+            <p class="logo-name">FrontEnd Soundz</p>
+        </div>
 
-            <div>
-                <a href="Home.hmtl">Home</a>
-                <a href="music library"> Music Library</a>
-                <a href="Explore.html">Explore</a>
-                <a href="about.html">About us</a>
-                <a href="Carib Beats.html">Carib Beats</a>
-            </div>
+        <div class="navibar-menu-space">
+            
+            <ul class="navibar-menu-list">
+                <li class="navibar-menu-list-item"><a href="index.html">Home</a></li>
+                <li class="navibar-menu-list-item"><a href="music library"> Music Library</a></li>
+                <li class="navibar-menu-list-item"><a href="Explore.html">Explore</a></li>
+                <li class="navibar-menu-list-item"><a href="about.html">About Us</a></li>
+                <li class="navibar-menu-list-item"><a href="Carib Beats.html">Carib Beats</a></li>
+            </ul>
         </div>
               
-            <div class="search-bar-wrapper">
-            <input id="searchEl" type="text" placeholder="Search">
-             <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+        <div class="search-and-user-wrapper">
+            <!-- User login|sign up -->
+            <div class="navibar-user-space">
+                <i class="fa-solid fa-user" style="color: #fcfcfc;"></i> 
+                <a class="login-btn" href="login.html">Login</a>
+                <span id="welcome-back" style="display: none;">Welcome Back</span>
             </div>
 
-          <!-- User login|sign up -->
-          <div class="navibar-user-space">
-            <i class="fa-solid fa-user" style="color: #fcfcfc;"></i> 
-            <a href="login.html">Login</a>
-            <span>|</span>
-            <a href="signup.html">Sign up</a>
+            <div class="search-bar-wrapper" onclick="searchOpen()">
+
+                <input id="searchEl" class="openSearchEl" type="text" placeholder="">
+
+                 <i id="search-bar-new-icon" class="fa-solid fa-magnifying-glass" style="color:#ffffff;"></i>
+            </div>
         </div>
-        
-        </div>
+    </div>
 
 
     <div class="hero-wrapper">
@@ -194,109 +198,148 @@
 
 
 
+                        <h4>Artist Name</h4>
+                     </div>
+                        <div>
+                            <ul>
+                                <li>Followers:</li>
+                            <li>Mood:</li>
+                            <li>Genre of focus:</li>
+                            <li>Residence</li>
+                        </ul>
+                        </div>
+        </div>
+       </div>
+    </section> 
+    <!--How to make cards for the thing
+    https://www.w3schools.com/howto/howto_css_cards.asp-->
+
+
+
+
+
+    <h4>Artist Name</h4>
+</div>
+   <div>
+       <ul>
+           <li>Followers:</li>
+       <li>Mood:</li>
+       <li>Genre of focus:</li>
+       <li>Residence</li>
+   </ul>
+   </div>
+</div>
+</div>
+</section> 
+<!--How to make cards for the thing
+https://www.w3schools.com/howto/howto_css_cards.asp-->
+
+
+
+
+
     <!--Fresh On The Net (HTML DONE)-->
     <section id="fotn-section" class="fotn-section">
         <!--Section Title (FRESH ON THE NET)-->
         <div class="section-header">
-            <h1 class="section-heading">FRESH ON THE NET</h1>
+        <h1 class="section-heading">FRESH ON THE NET</h1>
         </div>
         
         <!--Fresh On The Net Content-->
         <div class="fotn-content-wrapper">
-            <!--Container A-->
-            <div class="fotn-container-one">
-                <!--#1 Dive Deeper Card-->
-                <div class="fotn-card-one">
-
-                    <div class="fotn-card-one-header">
-                        <h3 class="fotn-card-one-heading">Dive Deeper Thank<br>Your Playlist</h3>
-                    </div>
-
-                    <div class="fotn-card-one-text-wrapper">
-                        <p class="fotn-card-one-text">Tired of the same old algorithms dictating your music discovery?
-                        <br>
-                        How about finding something fresh, something that ignites your
-                        <br>
-                        passion for new sounds and hidden gems instead?</p>
-
-                        <p class="fotn-card-one-text">Explore<span> Fresh on The Net</span> and unearth the hidden gems shaping the<br>future of sound.</p>
-                    </div>
-
-                    <div class="fotn-card-one-link-wrapper">
-                        <a class="fotn-card-one-link" href="">Find Your Next Obsession</a>
-                    </div>
-
-                </div>
-
-                <!--#2 Trending Genre Card-->
-                <div class="fotn-card-two">
-                    
-                    <!--Background Image with (Absolute Positioning)-->
-                    <img src="Images/Content/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" class="fotn-card-img" alt="Photo by Marcela Laskovski [DJ using mixer]">
-
-                    <!--Trending Genre Label with (Absolute Positioning)-->
-                    <div class="fotn-card-label-wrapper">
-                        <h4 class="fotn-card-label">Trending Genre</h4>
-                    </div>
-
-                    <!--Text Underlay (Purple Box)-->
-                    <div class="fotn-card-two-text-underlay">
-                        <div class="fotn-card-two-text-wrapper">
-                            <p class="fotn-card-two-text">ELECTRONIC<br> DANCE MUSIC</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Container B-->
-            <div class="fotn-container-two">
-                
-                <!--#3 FrontEnd Sound of the Week Card-->
-                <div class="fotn-card-three">
-
-                    <!--Background Album Image with (Absolute Positioning)-->
-                    <img src="Images/Song Images/L!FE - Whenever.jpg" class="fotn-card-img" alt="L!FE - Whenever | Album Cover by L!IFE">
-
-                    <!--FrontEnd Sound of the Week Label with (Absolute Positioning)-->
-                    <div class="fotn-card-label-wrapper">
-                        <h4 class="fotn-card-label">FrontEnd Sound of the Week</h4>
-                    </div>
-
-                    <!--Music Play Button with (Absolute Positioning)-->
-                    <button class="music-play-button" id="play-btn">
-                        <i class="fa fa-play" id="playIco"></i>
-                    </button>
-
-                    <!--Audio Javascript goes here-->
-                    
-                    
-                </div>
-
-                <!--#4 Upcoming Artist & Band Card-->
-                <div class="fotn-card-four">
-
-                    <!--a) Upcoming Card [Artist]-->
-                    <div class="fotn-card-upcoming-wrapper">
-                        <!--Trending Genre Label with (Absolute Positioning)-->
-                        <div class="fotn-card-label-wrapper">
-                            <h4 class="fotn-card-label">Upcoming Artist</h4>
-                        </div>
-                        <img src="Images/Artists Images/Lily Fitts.jpg" alt="">
-                    </div>
-
-                    <!--b) Upcoming Card [Band]-->
-                    <div class="fotn-card-upcoming-wrapper">
-                        <!--Trending Genre Label with (Absolute Positioning)-->
-                        <div class="fotn-card-label-wrapper">
-                            <h4 class="fotn-card-label">Upcoming Band</h4>
-                        </div>                        
-                        <img src="Images/Artists Images/Lily Fitts.jpg" alt="">
-                    </div>
-                </div>
-
-            </div>
+        <!--Container A-->
+        <div class="fotn-container-one">
+        <!--#1 Dive Deeper Card-->
+        <div class="fotn-card-one">
+        
+        <div class="fotn-card-one-header">
+           <h3 class="fotn-card-one-heading">Dive Deeper Thank<br>Your Playlist</h3>
+        </div>
+        
+        <div class="fotn-card-one-text-wrapper">
+           <p class="fotn-card-one-text">Tired of the same old algorithms dictating your music discovery?
+           <br>
+           How about finding something fresh, something that ignites your
+           <br>
+           passion for new sounds and hidden gems instead?</p>
+        
+           <p class="fotn-card-one-text">Explore<span> Fresh on The Net</span> and unearth the hidden gems shaping the<br>future of sound.</p>
+        </div>
+        
+        <div class="fotn-card-one-link-wrapper">
+           <a class="fotn-card-one-link" href="">Find Your Next Obsession</a>
+        </div>
+        
+        </div>
+        
+        <!--#2 Trending Genre Card-->
+        <div class="fotn-card-two">
+        
+        <!--Background Image with (Absolute Positioning)-->
+        <img src="Images/Content/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" class="fotn-card-img" alt="Photo by Marcela Laskovski [DJ using mixer]">
+        
+        <!--Trending Genre Label with (Absolute Positioning)-->
+        <div class="fotn-card-label-wrapper">
+           <h4 class="fotn-card-label">Trending Genre</h4>
+        </div>
+        
+        <!--Text Underlay (Purple Box)-->
+        <div class="fotn-card-two-text-underlay">
+           <div class="fotn-card-two-text-wrapper">
+               <p class="fotn-card-two-text">ELECTRONIC<br> DANCE MUSIC</p>
+           </div>
+        </div>
+        </div>
+        </div>
+        <!--Container B-->
+        <div class="fotn-container-two">
+        
+        <!--#3 FrontEnd Sound of the Week Card-->
+        <div class="fotn-card-three">
+        
+        <!--Background Album Image with (Absolute Positioning)-->
+        <img src="Images/Song Images/L!FE - Whenever.jpg" class="fotn-card-img" alt="L!FE - Whenever | Album Cover by L!IFE">
+        
+        <!--FrontEnd Sound of the Week Label with (Absolute Positioning)-->
+        <div class="fotn-card-label-wrapper">
+           <h4 class="fotn-card-label">FrontEnd Sound of the Week</h4>
+        </div>
+        
+        <!--Music Play Button with (Absolute Positioning)-->
+        <button class="music-play-button" id="play-btn">
+           <i class="fa fa-play" id="playIcon"></i>
+        </button>
+        
+        <!--Audio Javascript goes here-->
+        
+        
+        </div>
+        
+        <!--#4 Upcoming Artist & Band Card-->
+        <div class="fotn-card-four">
+        
+        <!--a) Upcoming Card [Artist]-->
+        <div class="fotn-card-upcoming-wrapper">
+           <!--Trending Genre Label with (Absolute Positioning)-->
+           <div class="fotn-card-label-wrapper">
+               <h4 class="fotn-card-label">Upcoming Artist</h4>
+           </div>
+           <img src="Images/Artists Images/Lily Fitts.jpg" alt="">
+        </div>
+        
+        <!--b) Upcoming Card [Band]-->
+        <div class="fotn-card-upcoming-wrapper">
+           <!--Trending Genre Label with (Absolute Positioning)-->
+           <div class="fotn-card-label-wrapper">
+               <h4 class="fotn-card-label">Upcoming Band</h4>
+           </div>                        
+           <img src="Images/Artists Images/Lily Fitts.jpg" alt="">
+        </div>
+        </div>
+        
+        </div>
         </div>
     </section>
-
     <hr>
 
     <!--Curated Genres (HTML DONE)-->
@@ -449,13 +492,17 @@
 
         <!-- More from FrontEnd Soundz -->
 
-        <div class="MoreFromFrontEndSoundz-space">
-            <div class="Row1-space"> 
-                <div class="col1">
-                <div class="col1"><img src="https://images.unsplash.com/photo-1526394931762-90052e97b376?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Record player"></div>
-                
+        <div class="row">
+            <div class="column">
+              <h2>Carib Beats!</h2>
+              <p>nleash the Island Rhythm:Vibe into the Carib Beats Scene</p>
+               <p>Escape the ordinary and discover the vibrants sounds of the Caribbean underground. To explore a treasure trove of captivating rhythms, infectious melodies and authentic island soul.</p>
             </div>
-                        
+            <div class="column" >
+              <img src="https://images.unsplash.com/photo-1526394931762-90052e97b376?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Record player">
+              
+            </div>
+          </div>
              
 
 </main>
