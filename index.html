@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b5390d3db8.js" crossorigin="anonymous"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jaldi:wght@400;700&display=swap');
     </style>
@@ -17,20 +19,36 @@
     <header>
     <div class="bg-overlay"></div>
 
-    <div class="space">
+     <div class="space">
         
-        <div class="navibar-logo-space">
-            <img src="https://drive.google.com\FrontEnd Soundz - Presentation.png" alt="FrontEnd Soundz logo"> 
-        </div>
         <div class="navibar-menu-space">
-            <a href="Home.hmtl">Home</a>
-            <a href="Music Library.html">Music Library</a>
-            <a href="Explore.html">Explore</a>
-            <a href="about.html">About us</a>
-            <a href="Carib Beats.html">Carib Beats</a>
-            <!--<a href="about.html">About Us</a> Example-->
+                
+            <img src="https://github.com/JoshLanderz19/CW3---Front-End-Soundz-Repository/blob/main/FrontEnd%20Soundz%20Logo.png?raw=true" alt="FrontEnd Soundz logo">
+            
+
+            <div>
+                <a href="Home.hmtl">Home</a>
+                <a href="music library"> Music Library</a>
+                <a href="Explore.html">Explore</a>
+                <a href="about.html">About us</a>
+                <a href="Carib Beats.html">Carib Beats</a>
+            </div>
         </div>
-    </div>
+              
+            <div class="search-bar-wrapper">
+            <input id="searchEl" type="text" placeholder="Search">
+             <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+            </div>
+
+          <!-- User login|sign up -->
+          <div class="navibar-user-space">
+            <i class="fa-solid fa-user" style="color: #fcfcfc;"></i> 
+            <a href="login.html">Login</a>
+            <span>|</span>
+            <a href="signup.html">Sign up</a>
+        </div>
+        
+        </div>
 
 
     <div class="hero-wrapper">
@@ -191,7 +209,7 @@
                 <div class="fotn-card-one">
 
                     <div class="fotn-card-one-header">
-                        <h3 class="fotn-card-one-heading">Dive Deeper Than<br>Your Playlist</h3>
+                        <h3 class="fotn-card-one-heading">Dive Deeper Thank<br>Your Playlist</h3>
                     </div>
 
                     <div class="fotn-card-one-text-wrapper">
@@ -223,7 +241,8 @@
 
                     <!--Text Underlay (Purple Box)-->
                     <div class="fotn-card-two-text-underlay">
-                        <div class="fotn-card-two-text">ELECTRONIC DANCE MUSIC</div>
+                        <div class="fotn-card-two-text-wrapper">
+                            <p class="fotn-card-two-text">ELECTRONIC<br> DANCE MUSIC</p>
                     </div>
                 </div>
             </div>
@@ -373,15 +392,18 @@
                     <!--Background Album Image-->
                     <img src="" class="curated-genres-ablum-img" alt="RHYTHYM AND BLUES | Taylor Belle - Letters To Myself | Album Cover by Taylor Belle">
 
-                    <!--Song To be Played-->
-                    <audio id="curated-genres-song" style="display: none;">
-                        <source src="/Audio/Vices feat. Madi Earl.mp3" type="audio/mp3">
-                    </audio>
-
-                    <!--Music Play Button with (Absolute Positioning)-->
-                    <button class="music-play-button">
-                        <i class="fa fa-play"></i>
-                    </button>
+                    <!--Song To be Played-->   
+                    <div class="playlistWrapper">
+                        <!--Music Play Button with (Absolute Positioning)-->
+                        <audio id="song" style="display: none;">
+                            <source src="/Audio/Vices feat. Madi Earl.mp3" type="audio/mp3">
+                        </audio>
+                        <button onclick="playPause()" class="music-play-button">
+                            <i class="fa fa-play" id="ctrlIcon"></i>
+                        </button>
+                    </div>
+                
+                    <script src="script.js" type="text/javascript"></script>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
                     <h3 class="curated-genres-ablum-title">RHYTHYM AND BLUES</h3>
@@ -396,7 +418,7 @@
                     <img src="" class="curated-genres-ablum-img" alt="REGGAE | soundbay - Island Breeze| Album Cover by soundbay">
 
                     <!--Song To be Played-->
-                    <audio id="curated-genres-song" style="display: none;">
+                    <audio id="curated-genres-song">
                         <source src="/Audio/Vices feat. Madi Earl.mp3" type="audio/mp3">
                     </audio>
 
@@ -410,11 +432,21 @@
                 </div>
             </div>
         </div>
+
     </section>
 
+        <!-- More from FrontEnd Soundz -->
+
+        <div class="MoreFromFrontEndSoundz-space">
+            <div class="Row1">
+                <div class="column"></div>
+                <div class="column"></div>
+              </div>
+                        
+             
 
 </main>
 
-
+<script src="script.js"></script>
 </body>
 </html>
