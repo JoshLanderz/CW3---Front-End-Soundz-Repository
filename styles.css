@@ -11,9 +11,11 @@
     --black-currant: rgb(14, 5, 15); 
     --hero-bg-overlay: rgb(14, 5, 15, 0.7);
     --darker-blue-primary: rgb(45, 22, 116);
+    --darker-blue-primary-transparent: rgb(45, 22, 116, 0.5);
     --light-purple-primary: rgb(146, 113, 194);
     --title-purple: rgb(163, 118, 243);
     --garrison-red: rgb(132, 19, 19);
+    --genre-edm-purple: rgb(112, 58, 207, 0.6);
 
     /*Outliner*/
     --outline: 2px solid var(--garrison-red);
@@ -29,12 +31,13 @@ html, body {
 header {
     position: relative;
     overflow: hidden;
-    height: 670px;
+    height: 680px;
     width: 100%;
     background-image: url("Images/Content/hanny-naibaho-aWXVxy8BSzc-unsplash(1).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 18%;
+    font-family: var(--ff-Jaldi);
 }
 
 /*Ignore This*/
@@ -48,7 +51,7 @@ header {
     position: absolute;
     background-color: var(--hero-bg-overlay);
     width: 100%;
-    height: 670px;
+    height: 680px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -84,7 +87,7 @@ ul, li {
     align-items: center;
     width: 100%;
     gap: 5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /*Start of Welcome Pitch Box*/
@@ -235,42 +238,83 @@ ul, li {
 /*End of Artists Display Cards and Call To Action Elements*/
 
 
-
-
 /* Navigation bar*/
-.space
-{border:1px rgb(111, 0, 128);
-height: 60px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding:0;
-position: relative;
-background-color: none;}
-
-
-
-
-
-.navibar-logo-space 
-{height:100%;}
-
-
-.navibar-logo-space>img
-{height:100%;
-color: white;}
-
-
-.navibar-menu-space
-{font-family: monospace;
-color: rgb(255, 255, 255);
-display: flex;
-width: 350px;
-margin-right: 600px;
-justify-content: space-evenly;
-align-items:center;
+.space {
+    padding: 16px;
+    padding-bottom: 0px;
+    border:1px rgb(111, 0, 128);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    background-color: none;
 }
-a{color: (255,255,255)}
+
+.navibar-menu-space > img {
+    height: 100%;
+    color: var(--white);
+    object-fit: cover;
+    width: 70px;
+}
+
+.navibar-menu-space{
+    font-family: monospace;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 350px;
+    margin-right: 300px;
+    gap: 30px;
+    width: fit-content;
+}
+
+.navibar-user-space {
+    position: relative;
+}
+
+.navibar-user-space>img {
+position:relative;
+display: inline-flex;
+top:8px;
+margin-top: 1px;} 
+
+
+.search-bar-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-wrapper i {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+}
+
+#searchEl
+{
+    background-color: var(--darker-blue-primary-transparent);
+    border-radius: 5px;
+    padding: 5px;
+    float: right;
+    border: none;
+    padding: 12px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    height: 10px;
+    color: white;
+}
+
+#searchEl::placeholder {
+    color: white;
+    font-size: 13px;
+}
+
+a{color: var(--white)}  
 
 
 
@@ -316,9 +360,7 @@ img {
 
 .fotn-container-one {
     display: grid;
-    place-content: start;
-    place-content: center;
-    justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .fotn-card-one {
@@ -364,3 +406,70 @@ img {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.fotn-card-two {
+    display: grid;
+    place-content: start;
+    position: relative;
+}
+
+.fotn-card-two img {
+    object-fit: cover;
+    width: 508px;
+    height: 500px;
+}
+
+.fotn-card-label-wrapper {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    background-color: var(--darker-blue-primary);
+}
+
+.fotn-card-label {
+    font-family: var(--ff-Jaldi);
+    padding: 8px 10px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fotn-card-two-text-underlay {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--genre-edm-purple);
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.fotn-card-two-text-wrapper {
+    border-left: 10px solid white;
+    margin: 1rem;
+    padding: 10px;
+}
+
+.fotn-card-two-text {
+    font-family: var(--ff-Istok-Web);
+    padding-left: 5px;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+/* More from FrontEnd Soundz */
+
+.column {
+    float: left;
+    width: 50%;
+    outline: 3px solid greenyellow;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    outline: 3px solid greenyellow;
+  }
