@@ -12,6 +12,7 @@
     --hero-bg-overlay: rgb(14, 5, 15, 0.7);
     --navibar-bg-transparent: rgb(45, 22, 116, 0.08);
     --darker-blue-primary: rgb(45, 22, 116);
+    --darker-blue-primary-nav-transparent: rgb(45, 22, 116, 0.97);
     --darker-blue-primary-transparent: rgb(45, 22, 116, 0.5);
     --light-purple-primary: rgb(146, 113, 194);
     --title-purple: rgb(163, 118, 243);
@@ -253,14 +254,29 @@ ul, li {
     z-index: 10;
     background-color: rgb(0, 0, 0, 0.2);
     position: fixed;
-    width: 100%;
     display: flex;
-    
     align-items: center;
     padding-inline: 55px;
     padding-bottom: 0px;
-    gap: 17rem;
+    gap: 20rem;
+    width: 100vw;
+    transition: linear 0.2s;
 }
+
+/**/
+.space-scroll {
+    z-index: 10;
+    background-color: var(--darker-blue-primary-nav-transparent);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding-inline: 55px;
+    padding-bottom: 0px;
+    gap: 20rem;
+    width: 100vw;
+    transition: linear 0.2s;
+}
+/**/
 
 .logo-wrapper {
     display: flex;
@@ -277,7 +293,7 @@ ul, li {
 
 .logo-name {
     font-family: var(--ff-Jaldi);
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     width: max-content;
 }
@@ -286,7 +302,6 @@ ul, li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 .search-and-user-wrapper {
@@ -400,8 +415,9 @@ img {
   object-fit: cover;
 }
 
-hr {
-    color: var(--genre-edm-purple);
+.section-break-hr {
+    border: none;
+    border-top: 1px solid var(--light-purple-primary);
 }
 
 section {
@@ -665,6 +681,14 @@ section {
     font-family: var(--ff-Jaldi);
     font-weight: bold;
     text-transform: uppercase;
+    transition: linear 0.2s;
+}
+
+.fotn-card-one-link:hover {
+    background-color: var(--darker-blue-primary);
+    transition: linear 0.2s;
+    color: white;
+    border-radius: 5px;
 }
 
 .fotn-card-two {
@@ -728,9 +752,7 @@ section {
 .fotn-card-three {
     width: 100%;
     position: relative;
-    height: fit-content;
     display: grid;
-    place-content: start;
 }
 
 .fotn-card-three > img {
@@ -739,13 +761,65 @@ section {
     height: 500px;
 }
 
-.music-play-button {
-    display: none;
+/*Play Button*/
+
+.play-button-wrapper {
     position: absolute;
-    bottom: 50px;
-    background-color: white;
-    border-radius: 0px 150px 150px 0px;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    background-color: var(--hero-bg-overlay);
+}
+
+.player-box {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.player-box-song-name {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 1px;
+    top: 5px;
+    left: 65px;
+    font-size: 25px;
+    font-family: var(--ff-Jaldi);
+}
+
+.player-box-song-name-spans {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    padding-inline: 15px;
+    top: 10px;
+    left: 250px;
+    background-color: var(--darker-blue-primary);
+}
+
+.player-box-song-name-spans span {
+    display: flex;
+    border-radius: 150px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family: var(--ff-Jaldi);
+    color: white;
+    font-size: 18px;
+}
+
+.music-play-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     border: none;
+    background: none;
 }
 
 #play-btn {
@@ -753,28 +827,93 @@ section {
 }
 
 .music-play-button i {
-    color: var(--darker-blue-primary);
+    color: white;
     font-size: 40px;
-    padding: 12px 30px;
+}
+
+#progress {
+    position: absolute;
+    -webkit-appearance: none;
+    width: 400px;
+    height: 6px;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--darker-blue-primary);
+    border: 2px solid #fff;
 }
 
 .fotn-card-four {
     position: relative;
     display: flex;
+    width: 100%;
     height: 390px;
     gap: 1.5rem;
 }
 
 .fotn-card-upcoming-wrapper {
     position: relative;
+    width: 230px;
+    height: 100%;
 }
 
 .fotn-card-upcoming-wrapper img {
-    width: 100%;
+    width: 230px;
     height: 100%;
     object-fit: cover;
 }
-section
+
+
+
+/*End of Fresh On The Net Section*/
+
+/*Start of The Curated Genres*/ 
+#curated-genres-section {
+    display: grid;
+    gap: 2rem;
+}
+
+#curated-genres-section .section-header {
+    display: flex;
+    justify-content: center;
+}
+
+.curated-genres-content-wrapper {
+    padding: 2rem;
+    border-inline: 1px solid var(--light-purple-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.curated-genres-ablum-wrapper {
+    display: grid;
+}
+
+.curated-genres-ablum {
+    position: relative;
+    width: 280px;
+}
+
+.curated-genres-ablum-img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.curated-genres-ablum-title {
+    font-family: var(--ff-Jaldi);
+}
+
 
 
 /* More from FrontEnd Soundz */
