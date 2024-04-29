@@ -400,12 +400,27 @@ img {
   object-fit: cover;
 }
 
+hr {
+    color: var(--genre-edm-purple);
+}
+
+section {
+    margin-block: 4rem 2rem;
+}
+
+.grid-section {
+    width: 100%;
+}
+
 /*Start of Featured Artists Section*/
 .featured-artists-section {
     display: grid;
     width: 100%;
-    margin-block: 5rem;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.section-description {
+    font-family: var(--ff-Jaldi);
 }
 
 .featured-artists-card-wrapper {
@@ -415,17 +430,64 @@ img {
 
 .featured-artists-card {
     position: relative;
+    display: grid;
+    gap: 0rem;
     background-color: white;
     width: 235px;
     height: 270px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .featured-artists-card .fotn-card-label-wrapper {
-    background-color: white;
+    display: grid;
+    place-content: start;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 81.5%;
+    left: 0%;
+    text-align: center;
+    background-color: rgba(23, 10, 83, 0.6);
+}
+
+.featured-artists-bio-text {
+    display: none;
+    font-family: var(--ff-Jaldi);
+}
+
+.featured-artists-card:hover .fotn-card-label-wrapper, .featured-artists-bio-text {
+    display: grid;
+}
+
+.featured-artists-card:hover .fotn-card-label-wrapper {
+    animation-name: ftArtistsLabelWrapper;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ftArtistsLabelWrapper {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        opacity: 1;
+    }
 }
 
 .featured-artists-card .fotn-card-label-wrapper .fotn-card-label {
-    color: var(--darker-blue-primary);
+    color: white;
+    margin-bottom: 2rem;
 }
 
 .featured-artists-card img {
@@ -434,8 +496,102 @@ img {
     height: 270px;
 }
 
+/*Social Media Icon Wrapper*/
+.social-media-wrapper {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 7px;
+}
 
+/* Wrapper */
+.icon-button {
+    background-color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.0rem;
+	height: 2rem;
+	line-height: 2rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2rem;
+}
 
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 2rem;
+	margin: -1rem;
+}
+
+.spotify span {
+    background-color: green;
+}
+
+.instagram span {
+    background-color: #bc2a8d;
+}
+  
+.twitter span {
+	background-color: black;
+}
+
+.facebook span {
+	background-color: rgb(44, 62, 177);
+}
+
+.tiktok span {
+	background-color: rgb(98, 22, 73);
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: var(--darker-blue-primary);
+	height: 2rem;
+	left: 0;
+	line-height: 2rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 2rem;
+	z-index: 10;
+}
+
+.icon-button:hover .fa-x-twitter,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-spotify,
+.icon-button:hover .fa-facebook,
+.icon-button:hover .fa-tiktok {
+	color: white;
+}
+
+/*End of Social Media Wrapper*/
 
 
 /*End of Featured Artists Section*/
@@ -605,14 +761,12 @@ img {
 .fotn-card-four {
     position: relative;
     display: flex;
-    justify-content: space-between;
     height: 390px;
-    width: 470px;
+    gap: 1.5rem;
 }
 
 .fotn-card-upcoming-wrapper {
     position: relative;
-    height: 390px;
 }
 
 .fotn-card-upcoming-wrapper img {
@@ -620,35 +774,35 @@ img {
     height: 100%;
     object-fit: cover;
 }
-
+section
 
 
 /* More from FrontEnd Soundz */
 
-  .column{
-    float: left;
-    width: 50%;
-    background-color:white;}
-
-.column h2{
-    color: black; 
   
-  }
-
-  .column p{
-    color: black; }
-
-  .column img {
-    height: 200px;
-    width: 300px;
-      }
+.grid
+{display:grid;
+  row-gap:1rem;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3,1fr);
   
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    margin: none;
-    padding: none;
-  }
+}
+
+.grid p{color: black;padding: 20px;  font-family: var(--ff-Jaldi);}
+.grid h2{color: black;padding: 40px,0;  font-family: var(--ff-Jaldi);font-size: 40px;}
+.grid span{color: black;  font-family: var(--ff-Jaldi);font-size: 40px;font-size: 16px;}
+.button{color: black; background-color: var(--genre-edm-purple);  font-family: var(--ff-Jaldi);}
+
+.card{background-color:var(--white);}
+
+.card img{height: 400px;width: 100%; padding: 3px;border-radius: 30px;}
+
+/*I changed your width from 600px to 100%
+
+Reason being that when you have a set width on your image it is going to go further than the width of the parent div.
+
+Whereas if I put it at 100%, it goes to the full length of the parent div without going futher than the parent div. 
+
+:) Problem solved, i think....
+
+*/
