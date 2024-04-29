@@ -404,6 +404,7 @@ ul, li {
 
 main {
     max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -607,6 +608,12 @@ section {
 	color: white;
 }
 
+.see-more-link {
+    color: var(--light-purple-primary);
+    font-family: var(--ff-Jaldi);
+    font-size: 25px;
+}
+
 /*End of Social Media Wrapper*/
 
 
@@ -634,6 +641,10 @@ section {
     gap: 1rem;
 }
 
+.fotn-container-one > * {
+    border: 1px solid var(--genre-edm-purple);
+}
+
 .fotn-container-one {
     display: grid;
     gap: 1rem;
@@ -643,6 +654,7 @@ section {
     width: fit-content;
     background-color: var(--white);
     display: grid;
+    width: 465px;
     place-content: start;
     padding: 1.5rem 3rem 3rem 3rem;
     gap: 1rem;
@@ -675,9 +687,9 @@ section {
 }
 
 .fotn-card-one-link {
-    border: 1px solid var(--darker-blue-primary);
+    border: 1px solid var(--genre-edm-purple);
     padding: 10px 15px;
-    color: var(--darker-blue-primary);
+    color: var(--genre-edm-purple);
     font-family: var(--ff-Jaldi);
     font-weight: bold;
     text-transform: uppercase;
@@ -685,22 +697,26 @@ section {
 }
 
 .fotn-card-one-link:hover {
-    background-color: var(--darker-blue-primary);
+    background-color: var(--genre-edm-purple);
+    border: none;
     transition: linear 0.2s;
     color: white;
     border-radius: 5px;
 }
 
 .fotn-card-two {
+    position: relative;
     display: grid;
     place-content: start;
     position: relative;
+    height: 480px;
+    cursor: pointer;
 }
 
 .fotn-card-two img {
     object-fit: cover;
-    width: 508px;
-    height: 500px;
+    width: 561px;
+    height: 480px;
 }
 
 .fotn-card-label-wrapper {
@@ -753,13 +769,25 @@ section {
     width: 100%;
     position: relative;
     display: grid;
+    border: 1px solid var(--genre-edm-purple);
 }
 
-.fotn-card-three > img {
+.fotn-card-img {
     object-fit: cover;
     width: 100%;
     height: 500px;
 }
+
+.fotn-card-img-overlay {
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
 
 /*Play Button*/
 
@@ -799,9 +827,10 @@ section {
     position: absolute;
     gap: 10px;
     padding-inline: 15px;
-    top: 10px;
+    border-radius: 150px;
+    top: 15px;
     left: 250px;
-    background-color: var(--darker-blue-primary);
+    background-color: var(--genre-edm-purple);
 }
 
 .player-box-song-name-spans span {
@@ -834,7 +863,7 @@ section {
 #progress {
     position: absolute;
     -webkit-appearance: none;
-    width: 400px;
+    width: 445px;
     height: 6px;
     background-color: white;
     border-radius: 4px;
@@ -855,22 +884,59 @@ section {
     position: relative;
     display: flex;
     width: 100%;
-    height: 390px;
-    gap: 1.5rem;
+    height: 330.5px;
+    gap: 1rem;
 }
 
 .fotn-card-upcoming-wrapper {
+    border: 1px solid var(--genre-edm-purple);
     position: relative;
-    width: 230px;
+    width: 100%;
     height: 100%;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+
+.fotn-card-upcoming-wrapper .fotn-card-label-wrapper {
+    width: 100%;
+    text-align: center;
+    top: 280.5px;
+    left: 0px;
+    height: fit-content;
+    background-color: var(--genre-edm-purple);
 }
 
 .fotn-card-upcoming-wrapper img {
-    width: 230px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.see-bio-link {
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    top: 12%;
+    right: 0%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: var(--ff-Jaldi);
+    z-index: 10;
+}
+
+.see-bio-link {
+    padding: 10px;
+}
+
+
+.fotn-card-two:hover .see-bio-link, .fotn-card-upcoming-wrapper:hover .see-bio-link {
+    display: grid;
+    transition: linear 0.2s;
+}
 
 
 /*End of Fresh On The Net Section*/
@@ -901,6 +967,7 @@ section {
 }
 
 .curated-genres-ablum {
+    cursor: pointer;
     position: relative;
     width: 280px;
 }
