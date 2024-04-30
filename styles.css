@@ -1,3 +1,7 @@
+/*
+Line 1226: Music Library Page
+*/
+
 
 /*Variables for CSS*/
 :root {
@@ -901,6 +905,8 @@ section {
     border: 2px solid #fff;
 }
 
+/*End of Play Button*/
+
 .fotn-card-four {
     position: relative;
     display: flex;
@@ -1116,6 +1122,170 @@ section {
 /*
 Reason: in your html, you have inline css: lol.
 yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-
-
 */
+
+
+
+
+
+
+
+
+.curated-genre-player-wrapper {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    bottom: 4px;
+    width: 100%;
+    height: max-content;
+    background-color: var(--darker-blue-primary-transparent);
+    overflow: hidden;
+}
+
+.curated-genre-song-box {
+    padding-block: 10px;
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    padding-inline: 15px;
+    width: 100%;
+}
+
+.curated-genre-song-description-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.curated-genre-song-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.curated-genre-song-name {
+    font-size: 15px;
+    font-family: var(--ff-Jaldi);
+    width: max-content;
+}
+
+.curated-genre-song-mood-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: var(--genre-edm-purple);
+    border-radius: 150px;
+    bottom: 80px;
+    right: 5px;
+}
+
+.curated-genre-song-mood {
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    font-size: 14px;
+    font-family: var(--ff-Jaldi);
+}
+
+.curated-genre-song-player-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.curated-genre-song-play-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.curated-genre-song-play-button i {
+    color: white;
+    font-size: 22px;
+}
+
+#cgs-play-btn {
+    display: block;
+}
+
+#cgs-progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cgs-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--darker-blue-primary);
+    border: 2px solid #fff;
+}
+
+#remainingTime {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-size: 14px;
+    font-family: var(--ff-Jaldi);
+}
+
+/*End of Play Button*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Music Library Page*/
+
+.music-library-header {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    background-image: url("Images/Content/wes-hicks-MEL-jJnm7RQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--ff-Jaldi);
+}
+
+.music-library-header-content {
+    outline: var(--outline);
+    position: absolute;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.music-library-title {
+    color: white;
+    font-family: var(--ff-Noto);
+    font-size: 100px;
+}
+
+
+
+
