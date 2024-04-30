@@ -3,6 +3,8 @@ let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let playIcon = document.getElementById("playIcon");
 
+let rTime = document.getElementById("rTime");
+
 song.onloadedmetadata = function(){
     song.pause();
     progress.max = song.duration;
@@ -22,9 +24,9 @@ function playPause(){
 }
 
 if(song.play()){
-    setInterval(()=>{
-        progress.value = song.currentTime;
-    },500);
+  setInterval(()=>{
+      progress.value = song.currentTime;
+  },500);
 }
 
 progress.onchange = function(){
@@ -35,16 +37,58 @@ progress.onchange = function(){
 }
 
 
-function searchOpen() {
-    const defaultSearchEl = document.getElementById("searchEl");
+//Curated Genres - Play Buttons
+let cgsProgress = document.getElementById("cgs-progress");
+let curatedGenreSong = document.getElementById("curated-genre-song");
+let cgsPlayIcon = document.getElementById("cgs-playIcon")
+let remainingTime = document.getElementById("remainingTime");
 
-    defaultSearchEl.classList.remove("openSearchEl");
-    defaultSearchEl.classList.add("newSearchEl");
-
-    const searchIcon = document.getElementById("search-bar-new-icon");
-
-    searchIcon.style.right = "12px";
+curatedGenreSong.onloadedmetadata = function(){
+  curatedGenreSong.pause();
+  cgsProgress.max = curatedGenreSong.duration;
+  cgsProgress.value = curatedGenreSong.currentTime;
 }
+
+
+function curatedGenresPlayPause(){
+  if(cgsPlayIcon.classList.contains("fa-pause")){
+      curatedGenreSong.pause();
+      cgsPlayIcon.classList.remove("fa-pause");
+      cgsPlayIcon.classList.add("fa-play");
+  } else {
+      curatedGenreSong.play();
+      cgsPlayIcon.classList.add("fa-pause");
+      cgsPlayIcon.classList.remove("fa-play");
+  }
+}
+
+
+if (curatedGenreSong.play()) {
+    let updateRemainingTime = setInterval(() => {
+    let currentTime = curatedGenreSong.currentTime;
+    let remaining = cgsProgress.max - currentTime;
+    let minutes = Math.floor(remaining / 60);
+    let seconds = Math.floor(remaining % 60);
+    minutes = minutes < 10 ? + "0" + minutes : minutes;
+    seconds = seconds < 10 ? + "0" + seconds : seconds;
+    remainingTime.textContent = `${minutes}:${seconds}`; // Update remaining time display
+  }, 500);
+
+    // Stop updating remaining time when the song ends
+    curatedGenreSong.onended = function() {
+      clearInterval(updateRemainingTime);
+      remainingTime.textContent = ""; // Clear remaining time after song ends
+    }
+  }
+  
+  cgsProgress.onchange = function() {
+    curatedGenreSong.play();
+    curatedGenreSong.currentTime = cgsProgress.value;
+    cgsPlayIcon.classList.add("fa-pause");
+    cgsPlayIcon.classList.remove("fa-play");
+  }
+
+
 
 
 /*Navbar
@@ -80,4 +124,13 @@ const recMottos = document.getElementById("motto-text");
   }
 }
 
+function searchOpen() {
+  const defaultSearchEl = document.getElementById("searchEl");
 
+  defaultSearchEl.classList.remove("openSearchEl");
+  defaultSearchEl.classList.add("newSearchEl");
+
+  const searchIcon = document.getElementById("search-bar-new-icon");
+
+  searchIcon.style.right = "12px";
+}
