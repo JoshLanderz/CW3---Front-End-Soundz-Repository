@@ -986,29 +986,115 @@ section {
 /* More from FrontEnd Soundz */
 
   
-.grid
-{display:grid;
-  row-gap:1rem;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(3,1fr);
-  
+.grid {
+    display:grid;
+    row-gap: 3rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
 
-.grid p{color: black;padding: 20px;  font-family: var(--ff-Jaldi);}
-.grid h2{color: black;padding: 40px,0;  font-family: var(--ff-Jaldi);font-size: 40px;}
-.grid span{color: black;  font-family: var(--ff-Jaldi);font-size: 40px;font-size: 16px;}
-.button{color: black; background-color: var(--genre-edm-purple);  font-family: var(--ff-Jaldi);}
+.card {
+    background-color:var(--white);
+    padding: 1rem 2rem;
+}
 
-.card{background-color:var(--white);}
 
-.card img{height: 400px;width: 100%; padding: 3px;border-radius: 30px;}
+.p-wrapper {
+    /*this wrapper is what will allow to have space between the paragraphs to make up the card space*/
+    display: grid;
+    place-content: start;/*this makes the text go at the top and remove any unwanted space */
+    gap: 1rem;
+    margin-block: 1rem 2rem;
+}
 
-/*I changed your width from 600px to 100%
+.card p {
+    color: black;
+    font-family: var(--ff-Jaldi);
+    line-height: 24px;
+    font-size: 18px;
+}
 
-Reason being that when you have a set width on your image it is going to go further than the width of the parent div.
+.card .more-from-fs-span {
+    color: var(--garrison-red);
+    width: fit-content;
+    /*trying to make the span text red in the css. oh okay
+    there we go .big up yoself!
 
-Whereas if I put it at 100%, it goes to the full length of the parent div without going futher than the parent div. 
+    */
+}
 
-:) Problem solved, i think....
+.grid h2 {
+    color: var(--genre-edm-purple);
+    padding: 0px; /*Still here? lol*/
+    margin-block: 35px 25px; 
+    font-family: var(--ff-Jaldi);
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.grid span {
+    color: black;  
+    font-family: var(--ff-Jaldi);
+    font-size: 16px;
+}
+
+
+.grid #button2, #button3, #button1 {
+    color: white; 
+    font-family: var(--ff-Jaldi);
+    border:none; 
+    font-size: large;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+
+.grid #button2, #button3 {
+    background-color: var(--darker-blue-primary);
+    color: white;
+    min-width: 230px;
+    max-width: 230px;
+}
+
+.grid #button1 {
+    background-color: var(--garrison-red);
+}
+
+#button1 {
+    margin-right: 10px;
+}
+
+.card:nth-child(1), .card:nth-child(3), .card:nth-child(5) {
+    border-top-left-radius: 10px;
+}
+
+.card:nth-child(2), .card:nth-child(4), .card:nth-child(6) {
+    border-bottom-right-radius: 10px;
+}
+
+.card:nth-child(1), .card:nth-child(4), .card:nth-child(5) {
+    padding-right: 0px 0px, 0px 0px;
+}
+
+.card:nth-child(2), .card:nth-child(3), .card:nth-child(6) {
+    display: grid;
+    align-items: center;
+    padding: 20px 0px, 0px 0px;
+}
+
+.card img {
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+
+/*
+Reason: in your html, you have inline css: lol.
+yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
 
 */
