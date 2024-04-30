@@ -39,7 +39,7 @@
             
             <ul class="navibar-menu-list">
                 <li class="navibar-menu-list-item"><a href="index.html">Home</a></li>
-                <li class="navibar-menu-list-item"><a href="music library"> Music Library</a></li>
+                <li class="navibar-menu-list-item"><a href="music library.html"> Music Library</a></li>
                 <li class="navibar-menu-list-item"><a href="Explore.html">Explore</a></li>
                 <li class="navibar-menu-list-item"><a href="about.html">About Us</a></li>
                 <li class="navibar-menu-list-item"><a href="Carib Beats.html">Carib Beats</a></li>
@@ -430,6 +430,34 @@
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
                     <img class="curated-genres-ablum-img" src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="EDM | Bodisaffa Music - Against The Wall |  Album Cover by Bodisaffa Music">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <div class="curated-genre-song-mood-wrapper">
+                            <span class="curated-genre-song-mood">Chill</span>
+                        </div>
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/Bodisaffa Music - Against the Wall [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">Bodisaffa Music - Against The Wall</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress">
+                            </div>
+                            <p id="remainingTime"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
                     <h3 class="curated-genres-ablum-title">EDM</h3>
