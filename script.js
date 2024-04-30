@@ -54,13 +54,20 @@ window.onscroll = function() {navbarScroll()};
 function navbarScroll() {
   const space = document.getElementById("space");
   const navLinks = document.getElementById("nav-links");
+  const logoSpan = document.getElementById("logo-span");
 
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     space.classList.remove("space");
     space.classList.add("space-scroll");
+
+    logoSpan.classList.remove("logo-span");
+    logoSpan.classList.add("logoSpan-scroll");
   } else {
     space.classList.add("space");
     space.classList.remove("space-scroll");
+
+    logoSpan.classList.add("logo-span");
+    logoSpan.classList.remove("logoSpan-scroll");
   }
 
 
