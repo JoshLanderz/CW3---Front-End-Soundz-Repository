@@ -265,7 +265,7 @@ ul, li {
 
 /**/
 .space-scroll {
-    z-index: 10;
+    z-index: 100;
     background-color: var(--darker-blue-primary-nav-transparent);
     position: fixed;
     display: flex;
@@ -293,9 +293,30 @@ ul, li {
 
 .logo-name {
     font-family: var(--ff-Jaldi);
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     width: max-content;
+    display: grid;
+}
+
+.logo-span {
+    position: absolute;
+    bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    color: var(--light-purple-primary);
+    transition: linear 0.2s;
+}
+
+.logoSpan-scroll {
+    position: absolute;
+    bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    color: white;
+    transition: linear 0.2s;
 }
 
 .search-and-user-wrapper {
