@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FrontEnd Soundz | It's More Than Music, It's A Movement</title>
+    <link rel="icon" href="Images/Content/FrontEnd Soundz Logo.png">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -505,16 +506,22 @@
 <div class="grid">
      
     <div class="card">
-     <h2 style="color: rgb(132, 19, 19);">Carib Beats!</h2><br>
-      <p>Unleash the Island Rhythm:Vibe into the Carib Beats Scene</p>
-      <p> Escape the ordinary and discover the vibrants sounds of the Caribbean underground. To explore a treasure trove of captivating rhythms, infectious melodies and authentic island soul.</p>
-      <button style="color: rgb(132, 19, 19);">Vibe Away</button> 
-       <span>Your next raggae, soca or calypso obsession awaits </span>
+    <!--Gonna put a wrapper around your p tags to control it-->
+      <h2 style="color: rgb(132, 19, 19);">Carib Beats!</h2>
+      
+      <!--Type this out below and press tab.
+        div.p-wrapper (exactly learnt from my Second father Kevin Powell lol. man is based. FR)
+    -->
+        <div class="p-wrapper"> <!--Back to CSS for a min-->
+            <p>Unleash the Island Rhythm: Vibe into the Carib    Beats Scene</p>
+            <p> Escape the ordinary and discover the vibrants   sounds of the<br> Caribbean underground. To explore a treasure trove of captivating<br> rhythms, infectious  melodies and authentic island soul.</p>
+        </div> 
+        <button id="button1">Vibe Away</button> 
+        <span class="more-from-fs-span">Your next raggae, soca or calypso obsession awaits</span>
     </div> 
  
   <div class="card">
        <img src="https://images.unsplash.com/photo-1526394931762-90052e97b376?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="record player">
-   
   </div>
  
   <div class="card">
@@ -523,18 +530,22 @@
   </div>
  
  <div class="card">
-      <h2 style="color: rgb(112, 58, 207, 0.6);">Touring Dates for Featured Artists</h2><br>
-      <p>Want to catch these rising stars live?</p>
-      <p> follow artist profiles and find upcoming shows, ticket prices and venues!</p>
-   <button style="color: rgb(112, 58, 207, 0.6);">Touring Dates & More</button>
-    </div>
+        <h2>Touring Dates for Featured Artists</h2>
+        <div class="p-wrapper">
+            <p>Want to catch these rising stars live?</p>
+            <p> follow artist profiles and find upcoming shows, ticket prices and venues!</p>
+        </div>
+        <button id="button2">Touring Dates & More</button>
+</div>
  
  <div class="card">
-      <h2 style="color: rgb(112, 58, 207, 0.6);">Collaborate with these creatures Themselves</h2><br>
-      <p>Tired of the same old algorithms dictating your music discovery? How about finding something fresh, something that ignites your passion for new sounds and hidden gems instead?</p>
-      <p> Explore Fresh on the Net and unearth the hidden gems shaping the future of sound.</p>
-   <button style="color: rgb(112, 58, 207, 0.6);">Collaborate</button>
-    </div>
+      <h2>Collaborate with these creatures Themselves</h2>
+      <div class="p-wrapper">
+        <p>Tired of the same old algorithms dictating your music discovery? How about finding something fresh, something that ignites your passion for new sounds and hidden gems  instead?</p>
+        <p> Explore <b>Fresh on the Net</b> and unearth the hidden gems shaping the future of sound.</p>
+      </div>
+    <button id="button3">Collaborate</button>
+</div>
  
  <div class="card">
       <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8WFZwUXRnMlFmdm98fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitars">
