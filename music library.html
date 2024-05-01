@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Soundz | It's More Than Music, It's A Movement</title>
+    <link rel="icon" href="Images/Content/FrontEnd Soundz Logo.png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Plyr CSS & JS CDN Links-->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+    <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b5390d3db8.js" crossorigin="anonymous"></script>
+    
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jaldi:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+
+<!--(Navbar & Hero Content) Dellonte's Lair-->
+    <header class="music-library-header">
+    <div class="bg-overlay"></div>
+
+     <div class="space" id="space">
+        
+        <div class="logo-wrapper">
+            <img class="logo" src="https://github.com/JoshLanderz19/CW3---Front-End-Soundz-Repository/blob/main/FrontEnd%20Soundz%20Logo.png?raw=true" alt="FrontEnd Soundz logo">
+            <p class="logo-name">FrontEnd Soundz
+                <span class="logo-span" id="logo-span">It's more than music, it's a movement</span>
+            </p>
+        </div>
+
+        <div class="navibar-menu-space">
+            
+            <ul class="navibar-menu-list">
+                <li class="navibar-menu-list-item"><a href="index.html">Home</a></li>
+                <li class="navibar-menu-list-item"><a href="music library"> Music Library</a></li>
+                <li class="navibar-menu-list-item"><a href="Explore.html">Explore</a></li>
+                <li class="navibar-menu-list-item"><a href="about.html">About Us</a></li>
+                <li class="navibar-menu-list-item"><a href="Carib Beats.html">Carib Beats</a></li>
+            </ul>
+        </div>
+              
+        <div class="search-and-user-wrapper">
+            <!-- User login|sign up -->
+            <div class="navibar-user-space">
+                <i class="fa-solid fa-user" style="color: #fcfcfc;"></i> 
+                <a class="login-btn" href="login.html">Login</a>
+                <span id="welcome-back" style="display: none;">Welcome Back</span>
+            </div>
+
+            <div class="search-bar-wrapper" onclick="searchOpen()" style="display: none;">
+
+                <input id="searchEl" class="openSearchEl" type="text" placeholder="">
+
+                 <i id="search-bar-new-icon" class="fa-solid fa-magnifying-glass" style="color:#ffffff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="music-library-header-content">
+
+
+        <div class="music-library-header-content">
+            <div class="music-library-title-wrapper">
+                <h1 class="music-library-title">MUSIC LIBRARY</h1>
+            </div>
+
+            <div class="music-library-sub-title-wrapper">
+                <h1 class="music-library-sub-title">MUSIC LIBRARY</h1>
+            </div>
+        </div>
+    </div>
+    </header>    
+
+    
+<main>
+
+    <!--Featured Artists (Simone)-->
+    <section class="featured-artists-section">
+        <!--Section Title (FEATURED ARTISTS)-->
+        <div class="section-header">
+            <h1 class="section-heading">Featured Artists</h1>
+
+            <p class="section-description">
+                Join the community, discover hidden gems, and unleash the sound of tomorrow.
+            </p>
+        </div>
+
+        <div class="featured-artists-card-wrapper">
+
+            <!--Featured Artists #1 - Lyle Kam-->
+            <div class="featured-artists-card">
+                <div class="fotn-card-label-wrapper">
+                    <h4 class="fotn-card-label">Lyle Kam</h4>
+                    <p class="featured-artists-bio-text">Followers: 47.6K</p>
+                    <p class="featured-artists-bio-text">Mood: Upbeat</p>
+                    <p class="featured-artists-bio-text">Genres of Focus: Alt Indie, Pop</p>
+                    <p class="featured-artists-bio-text">Residence: Toronto, USA</p>
+
+                    <div class="social-media-wrapper">
+                        <a target="_blank" href="https://open.spotify.com/artist/3tpxZOPwm3IFQo00wq6hNd?si=4BSyEF3FRVuic6n8JmSBFA" class="icon-button spotify">
+                            <i class="fab fa-spotify"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/lylekam/" class="icon-button instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://twitter.com/KamLyle" class="icon-button twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>        
+                <div class="featured-artist-img-wrapper">
+                    <img src="Images/Artists Images/Lyle Kam (2).jpg" alt="Photo of Lyle Kam">
+                </div>
+            </div>
+
+            <!--Featured Artists #2 - Tiana Kocher-->
+            <div class="featured-artists-card">
+                <div class="fotn-card-label-wrapper">
+                    <h4 class="fotn-card-label">Tiana Kocher</h4>
+                    <p class="featured-artists-bio-text">Followers: 195.2K</p>
+                    <p class="featured-artists-bio-text">Mood: Relaxing</p>
+                    <p class="featured-artists-bio-text">Genres of Focus: Pop, R&B</p>
+                    <p class="featured-artists-bio-text">Residence: Los Angeles, USA</p>
+
+                    <div class="social-media-wrapper">
+                        <a target="_blank" href="https://open.spotify.com/artist/0aQl6dYFpdEuGuRVzcUBE6?si=r2c5gGrOTPWVW_XZE5whug" class="icon-button spotify">
+                            <i class="fab fa-spotify"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/tianakocher/" class="icon-button instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://twitter.com/tianakocher" class="icon-button twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>        
+                <div class="featured-artist-img-wrapper">
+                    <img src="Images/Artists Images/Tiana Kocher.jpg" alt="Photo of Tiana Kocher">
+                </div>
+            </div>
+
+            <!--Featured Artists #3 - Afonso-->
+            <div class="featured-artists-card">
+                <div class="fotn-card-label-wrapper">
+                    <h4 class="fotn-card-label">Afonso</h4>
+                    <p class="featured-artists-bio-text">Followers: 195.2K</p>
+                    <p class="featured-artists-bio-text">Mood: Groovy</p>
+                    <p class="featured-artists-bio-text">Genres of Focus: R&B, Jazz</p>
+                    <p class="featured-artists-bio-text">Residence: Portugal</p>
+
+                    <div class="social-media-wrapper">
+                        <a target="_blank" href="https://open.spotify.com/artist/19ZWrFOuK5OEk7SaALa6fr?si=2s_GO378StaxSz8Xnm8L-g" class="icon-button spotify">
+                            <i class="fab fa-spotify"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/a.fonso/" class="icon-button instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/afonsomusic/" class="icon-button facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>        
+                <div class="featured-artist-img-wrapper">
+                    <img src="Images/Artists Images/Afonso.jpg" alt="Photo of Afonso">
+                </div>
+            </div>
+
+            <!--Featured Artists #3 - Drew Richmond-->
+            <div class="featured-artists-card">
+                <div class="fotn-card-label-wrapper">
+                    <h4 class="fotn-card-label">Drew Richmond</h4>
+                    <p class="featured-artists-bio-text">Followers: 195.2K</p>
+                    <p class="featured-artists-bio-text">Mood: Soothing</p>
+                    <p class="featured-artists-bio-text">Genres of Focus: EDM, Alt Indie, Rock</p>
+                    <p class="featured-artists-bio-text">Residence: Nashville, Tennessee</p>
+
+                    <div class="social-media-wrapper">
+                        <a target="_blank" href="https://open.spotify.com/artist/0KTBOtduEU6295wJIPW0ol" class="icon-button spotify">
+                            <i class="fab fa-spotify"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.tiktok.com/@drewdoesmusic" class="icon-button tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span></span>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/afonsomusic/" class="icon-button facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>        
+                <div class="featured-artist-img-wrapper">
+                    <img src="Images/Artists Images/Drew Richmond.jpg" alt="Photo of Drew Richmond">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="see-more-wrapper">
+            <a class="see-more-link" href="explore.html">See more...</a>
+        </div>
+    </section> 
+
+    <hr class="section-break-hr">
+
+    <!--Fresh On The Net (HTML DONE)-->
+    <section id="fotn-section" class="fotn-section">
+        <!--Section Title (FRESH ON THE NET)-->
+        <div class="section-header">
+            <h1 class="section-heading">Fresh On The Net</h1>
+        </div>
+        
+        <!--Fresh On The Net Content-->
+        <div class="fotn-content-wrapper">
+            <!--Container A-->
+            <div class="fotn-container-one">
+
+                <!--#1 Dive Deeper Card-->
+                <div class="fotn-card-one">
+        
+                    <div class="fotn-card-one-header">
+                       <h3 class="fotn-card-one-heading">Dive Deeper Than<br>Your Playlist</h3>
+                    </div>
+        
+                    <div class="fotn-card-one-text-wrapper">
+                        <p class="fotn-card-one-text">Tired of the same old algorithms dictating your music discovery?
+                        <br>
+                        How about finding something fresh, something that ignites your
+                        <br>
+                        passion for new sounds and hidden gems instead?</p>
+        
+                        <p class="fotn-card-one-text">Explore<span> Fresh on The Net</span> and unearth the hidden gems shaping the<br>future of sound.</p>
+                    </div>
+        
+                    <div class="fotn-card-one-link-wrapper">
+                       <a class="fotn-card-one-link" href="">Find Your Next Obsession</a>
+                    </div>
+        
+                </div>
+        
+                <!--#2 Trending Genre Card-->
+                <div class="fotn-card-two">
+        
+                    <!--Background Image with (Absolute Positioning)-->
+                    <img src="Images/Content/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" class="fotn-card-img" alt="Photo by Marcela Laskovski [DJ using mixer]">
+                            
+                    <!--Trending Genre Label with (Absolute Positioning)-->
+                    <div class="fotn-card-label-wrapper">
+                       <h4 class="fotn-card-label">Trending Genre</h4>
+                    </div>
+                    
+                    <!--Text Underlay (Purple Box)-->
+                    <div class="fotn-card-two-text-underlay">
+                       <div class="fotn-card-two-text-wrapper">
+                           <p class="fotn-card-two-text">ELECTRONIC<br> DANCE MUSIC</p>
+                       </div>
+                    </div>
+                    <a class="see-bio-link" href="explore.html">
+                        <i class="fa fa-link"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!--Container B-->
+            <div class="fotn-container-two">
+            
+                <!--#3 FrontEnd Sound of the Week Card-->
+                <div class="fotn-card-three">
+                
+                    <!--Background Album Image with (Absolute Positioning)-->
+                    <img src="Images/Song Images/L!FE - Whenever.jpg" class="fotn-card-img" alt="L!FE - Whenever | Album Cover by L!IFE">
+                    
+                    <!--FrontEnd Sound of the Week Label with (Absolute Positioning)-->
+                    <div class="fotn-card-label-wrapper">
+                       <h4 class="fotn-card-label">FrontEnd Sound of the Week</h4>
+                    </div>
+ 
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="play-button-wrapper">
+                        <audio id="song" style="display: none;">
+                            <source src="Audio/L!FE - Whenever [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="player-box">
+                            <p class="player-box-song-name">L!FE - Whenever
+                            <div class="player-box-song-name-spans">
+                                <span>Chill</span>|
+                                <span>Upbeat</span>
+                            </div>  
+                            </p>
+                            <button onclick="playPause()" class="music-play-button"     id="play-btn">
+                                <i class="fa fa-play" id="playIcon"></i>
+                            </button>
+                            <input type="range" value="0" id="progress">
+                        </div>
+                    </div>
+                </div>
+        
+                
+                <!--#4 Upcoming Artist & Band Card-->
+                <div class="fotn-card-four">
+        
+                    <!--a) Upcoming Card [Artist]-->
+                    <div class="fotn-card-upcoming-wrapper">
+                       <!--Trending Genre Label with (Absolute Positioning)-->
+                       <div class="fotn-card-label-wrapper">
+                           <h4 class="fotn-card-label">Upcoming Artist</h4>
+                       </div>
+                       <img src="Images/Artists Images/Lily Fitts.jpg" alt="Photo of Lily Fitts">
+                       <a class="see-bio-link" href="explore.html">
+                        <i class="fa fa-link"></i>
+                       </a>
+                    </div>
+
+                    <!--b) Upcoming Card [Band]-->
+                    <div class="fotn-card-upcoming-wrapper">
+                       <!--Trending Genre Label with (Absolute Positioning)-->
+                       <div class="fotn-card-label-wrapper">
+                           <h4 class="fotn-card-label">Upcoming Band</h4>
+                       </div>                        
+                       <img src="Images/Bands Images/Diviners.png" alt="Photo of Diviners">
+                       <a class="see-bio-link" href="explore.html">
+                        <i class="fa fa-link"></i>
+                       </a>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+    
+    <hr class="section-break-hr">
+
+    <!--Curated Genres (HTML DONE)-->
+    <section id="curated-genres-section">
+        <!--Section Title (Curated Genres)-->
+        <div class="section-header">
+            <h1 class="section-heading">Curated Genres</h1>
+        </div>
+
+        <!--Curated Genres Content-->
+        <div class="curated-genres-content-wrapper">
+
+            <!--Genre: EDM-->
+            <!--#1 Bodisaffa Music - Against The Wall (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="EDM | Bodisaffa Music - Against The Wall |  Album Cover by Bodisaffa Music">
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">EDM</h3>
+                </div>
+            </div>
+
+            <!--Genre: HIP HOP-->
+            <!--#2 L!FE - Whenever (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img src="Images/Song Images/L!FE - Whenever.jpg" class="curated-genres-ablum-img" alt="HIP HOP | L!FE - Whenever | Album Cover by L!IFE">
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">HIP HOP</h3>
+                </div>
+            </div>
+
+            <!--Genre: LO-FI-->
+            <!--#3 Reymi Chrono - Elevate (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img src="Images/Song Images/Reymi Chrono - Elevate.jpg" class="curated-genres-ablum-img" alt="LO-FI | Reymi Chrono - Elevate | Album Cover by Reymi Chrono">
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">LO-FI</h3>
+                </div>
+            </div>
+
+            <!--Genre: INDEPENDENT (INDIE)-->
+            <!--#4 Lyle Kam - internet crush (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img src="Images/Song Images/Lyle Kam - internet crush.jpg" class="curated-genres-ablum-img" alt="HIP HOP | Lyle Kam - internet crush | Album Cover by Lyle Kam">
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">INDEPENDENT</h3>
+                </div>
+            </div>
+
+            <!--Genre: RHYTHYM AND BLUES-->
+            <!--#5 Taylor Belle - Letters To Myself (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img src="Images/Song Images/Taylor Belle - Love Letters To Myself.jpg" class="curated-genres-ablum-img" alt="RHYTHYM AND BLUES | Taylor Belle - Letters To Myself | Album Cover by Taylor Belle">                      
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">RHYTHYM AND BLUES</h3>
+                </div>
+            </div>
+
+            <!--Genre: REGGAE-->
+            <!--#6 soundbay - Island Breeze [Happy Reggae Background] (Album)-->
+            <div class="curated-genres-ablum-wrapper">
+                <div class="curated-genres-ablum">
+                    <!--Background Album Image-->
+                    <img src="Images/Song Images/Island Breeze - Happy Reggae Background.jpg" class="curated-genres-ablum-img" alt="REGGAE | soundbay - Island Breeze| Album Cover by soundbay">
+                </div>
+                <div class="curated-genres-ablum-title-wrapper">
+                    <h3 class="curated-genres-ablum-title">REGGAE</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- More from FrontEnd Soundz -->
+    <section id="grid-section">
+
+
+
+
+<div class="grid">
+     
+    <div class="card">
+    <!--Gonna put a wrapper around your p tags to control it-->
+      <h2 style="color: rgb(132, 19, 19);">Carib Beats!</h2>
+      
+      <!--Type this out below and press tab.
+        div.p-wrapper (exactly learnt from my Second father Kevin Powell lol. man is based. FR)
+    -->
+        <div class="p-wrapper"> <!--Back to CSS for a min-->
+            <p>Unleash the Island Rhythm: Vibe into the Carib    Beats Scene</p>
+            <p> Escape the ordinary and discover the vibrants   sounds of the<br> Caribbean underground. To explore a treasure trove of captivating<br> rhythms, infectious  melodies and authentic island soul.</p>
+        </div> 
+        <button id="button1">Vibe Away</button> 
+        <span class="more-from-fs-span">Your next raggae, soca or calypso obsession awaits</span>
+    </div> 
+ 
+  <div class="card">
+       <img src="https://images.unsplash.com/photo-1526394931762-90052e97b376?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="record player">
+  </div>
+ 
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8N3xYVnBRdGcyUWZ2b3x8ZW58MHx8fHx8" alt="Mic">
+      
+  </div>
+ 
+ <div class="card">
+        <h2>Touring Dates for Featured Artists</h2>
+        <div class="p-wrapper">
+            <p>Want to catch these rising stars live?</p>
+            <p> follow artist profiles and find upcoming shows, ticket prices and venues!</p>
+        </div>
+        <button id="button2">Touring Dates & More</button>
+</div>
+ 
+ <div class="card">
+      <h2>Collaborate with these creatures Themselves</h2>
+      <div class="p-wrapper">
+        <p>Tired of the same old algorithms dictating your music discovery? How about finding something fresh, something that ignites your passion for new sounds and hidden gems  instead?</p>
+        <p> Explore <b>Fresh on the Net</b> and unearth the hidden gems shaping the future of sound.</p>
+      </div>
+    <button id="button3">Collaborate</button>
+</div>
+ 
+ <div class="card">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8WFZwUXRnMlFmdm98fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitars">
+    </div>
+</div>
+
+
+
+
+
+
+    </section>   
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
