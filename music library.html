@@ -83,7 +83,9 @@
     <section id="frontend-soundz-playlist-section">
         <div class="frontend-soundz-playlist-wrapper">
             <div class="frontend-soundz-playlist-preview">
-                <div class="frontend-soundz-playlist-status-wrapper"></div>
+                <div class="frontend-soundz-playlist-status-wrapper">
+                    <p class="frontend-soundz-playlist-status">NOW PLAYING</p>
+                </div>
                 <div class="frontend-soundz-playlist-preview-track-wrapper">
                     <div class="frontend-soundz-playlist-preview-track-img-wrapper">
                         <img src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="Album of Bodaisaffa - Against The Wall">
@@ -91,7 +93,7 @@
                     <div class="frontend-soundz-playlist-preview-track-description-wrapper">
                         <div class="frontend-soundz-playlist-preview-track-description">
                             <h1 class="frontend-soundz-playlist-preview-track-name">Against The Wall</h1>
-                        <p class="frontend-soundz-playlist-preview-track-artist">Bodisaffa Music</p>
+                            <p class="frontend-soundz-playlist-preview-track-artist">Bodisaffa Music</p>
                         </div>
                         <div class="frontend-soundz-playlist-preview-mood-wrapper">
                             <span class="frontend-soundz-playlist-preview-mood">Energetic</span>
@@ -100,10 +102,80 @@
                     </div>
                 </div>
                 <div class="frontend-soundz-playlist-preview-player-box">
-                    
+                    <audio id="curated-genre-song" style="display: none;">
+                        <source src="Audio/Taylor Belle - Love Letters to Myself [Thematic].mp3" type="audio/mp3">
+                    </audio>
+
+                    <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+
+                    <p class="remainingTime" id="remainingTime">2:37</p>
+                        
+                    <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                        <i class="fa fa-play" id="cgs-playIcon"></i>
+                    </button>
+                </div>
+                        
+                   
+
+            </div>
+
+            <div class="frontend-soundz-playlist-c2">
+                <div class="frontend-soundz-playlist-c2-header">
+                    <div class="frontend-soundz-playlist-c2-logo-wrapper">
+                        <img src="Images/Content/FrontEnd Soundz Logo.png" alt="Logo of FrontEnd Soundz">
+                    </div>
+                    <div class="frontend-soundz-playlist-header">
+                        <h1 class="frontend-soundz-playlist-heading">FRONTEND SOUNDZ
+                            <br>
+                            <span>PLAYLIST</span>
+                        </h1>
+                    </div>
+                </div> 
+            
+                <div class="frontend-soundz-playlist-list-wrapper">
+                    <ul class="frontend-soundz-playlist-list">
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                    <img src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
+                            <div class="playlist-list-element-content-wrapper"></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="frontend-soundz-playlist-selection"></div>
+        </div>
+
         </div>
     </section>
 
