@@ -425,11 +425,11 @@
 
             <!--Genre: EDM-->
             <!--#1 Bodisaffa Music - Against The Wall (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="Bodisaffa Music - Against The Wall" data-src="Audio/Bodisaffa Music - Against the Wall [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
                     <div class="curated-genre-song-mood-wrapper">
-                        <span class="curated-genre-song-mood">Chill</span>
+                        <span class="curated-genre-song-mood">Engergetic</span>
                     </div>
                     <img class="curated-genres-ablum-img" src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="EDM | Bodisaffa Music - Against The Wall |  Album Cover by Bodisaffa Music">
                     
@@ -452,9 +452,9 @@
                                 <i class="fa fa-play" id="cgs-playIcon"></i>
                             </button>
                             
-                            <input type="range" value="0" id="cgs-progress">
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
                             </div>
-                            <p id="remainingTime"></p>
+                            <p class="remainingTime" id="remainingTime">2:59</p>
                         </div>
                     </div>
                 </div>
@@ -465,10 +465,38 @@
 
             <!--Genre: HIP HOP-->
             <!--#2 L!FE - Whenever (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="L!FE - Whenever" data-src="Audio/L!FE - Whenever [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
-                    <img src="Images/Song Images/L!FE - Whenever.jpg" class="curated-genres-ablum-img" alt="HIP HOP | L!FE - Whenever | Album Cover by L!IFE">
+                    <div class="curated-genre-song-mood-wrapper">
+                        <span class="curated-genre-song-mood">Chill</span>
+                    </div>
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/L!FE - Whenever.jpg" alt="HIP HOP | L!FE - Whenever |  Album Cover by L!FE">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/L!FE - Whenever [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">L!FE - Whenever</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+                            </div>
+                            <p class="remainingTime" id="remainingTime">2:58</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
                     <h3 class="curated-genres-ablum-title">HIP HOP</h3>
@@ -477,10 +505,38 @@
 
             <!--Genre: LO-FI-->
             <!--#3 Reymi Chrono - Elevate (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="Reymi Chrono - Elevate" data-src="Audio/Reymi Chrono - Elevate [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
-                    <img src="Images/Song Images/Reymi Chrono - Elevate.jpg" class="curated-genres-ablum-img" alt="LO-FI | Reymi Chrono - Elevate | Album Cover by Reymi Chrono">
+                    <div class="curated-genre-song-mood-wrapper">
+                        <span class="curated-genre-song-mood">Retro Trance</span>
+                    </div>
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/Reymi Chrono - Elevate.jpg" alt="HIP HOP | Reymi Chrono - Elevate |  Album Cover by L!FE">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/Reymi Chrono - Elevate [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">Reymi Chrono - Elevate</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+                            </div>
+                            <p class="remainingTime" id="remainingTime">1:41</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
                     <h3 class="curated-genres-ablum-title">LO-FI</h3>
@@ -489,37 +545,138 @@
 
             <!--Genre: INDEPENDENT (INDIE)-->
             <!--#4 Lyle Kam - internet crush (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="Lyle Kam - internet crush" data-src="Audio/Lyle Kam - internet crush [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
-                    <img src="Images/Song Images/Lyle Kam - internet crush.jpg" class="curated-genres-ablum-img" alt="HIP HOP | Lyle Kam - internet crush | Album Cover by Lyle Kam">
+                    <div class="curated-genre-song-mood-wrapper">
+                        <span class="curated-genre-song-mood">Mellow</span>
+                    </div>
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/Lyle Kam - internet crush.jpg" alt="HIP HOP | Lyle Kam - internet crush |  Album Cover by L!FE">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/Lyle Kam - internet crush [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">Lyle Kam - internet crush</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+                            </div>
+                            <p class="remainingTime" id="remainingTime">2:52</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
                     <h3 class="curated-genres-ablum-title">INDEPENDENT</h3>
                 </div>
             </div>
 
+
             <!--Genre: RHYTHYM AND BLUES-->
             <!--#5 Taylor Belle - Letters To Myself (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="Taylor Belle - Letters To Myself" data-src="Audio/Taylor Belle - Letters To Myself [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
-                    <img src="Images/Song Images/Taylor Belle - Love Letters To Myself.jpg" class="curated-genres-ablum-img" alt="RHYTHYM AND BLUES | Taylor Belle - Letters To Myself | Album Cover by Taylor Belle">                      
+                    <div class="curated-genre-song-mood-wrapper">
+                        <span class="curated-genre-song-mood">Soothing</span>
+                    </div>
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/Taylor Belle - Love Letters To Myself.jpg" alt="HIP HOP | Taylor Belle - Letters To Myself |  Album Cover by L!FE">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/Taylor Belle - Love Letters to Myself [Thematic].mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">Taylor Belle - Letters To Myself</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+                            </div>
+                            <p class="remainingTime" id="remainingTime">2:37</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
-                    <h3 class="curated-genres-ablum-title">RHYTHYM AND BLUES</h3>
+                    <h3 class="curated-genres-ablum-title">LO-FI</h3>
                 </div>
             </div>
 
             <!--Genre: REGGAE-->
-            <!--#6 soundbay - Island Breeze [Happy Reggae Background] (Album)-->
-            <div class="curated-genres-ablum-wrapper">
+            <div class="curated-genres-album-wrapper" data-song="soundbay - Island Breeze (Happy Reggae Backgroound Music)" data-src="Audio/soundbay - Island Breeze (Happy Reggae Backgroound Music) [Thematic].mp3">
                 <div class="curated-genres-ablum">
                     <!--Background Album Image-->
-                    <img src="Images/Song Images/Island Breeze - Happy Reggae Background.jpg" class="curated-genres-ablum-img" alt="REGGAE | soundbay - Island Breeze| Album Cover by soundbay">
+                    <div class="curated-genre-song-mood-wrapper">
+                        <span class="curated-genre-song-mood">Plucky Bass</span>
+                    </div>
+                    <img class="curated-genres-ablum-img" src="Images/Song Images/soundbay - Island Breeze (Happy Reggae Background Royalty Free Music for YouTube).jpg" alt="HIP HOP | soundbay - Island Breeze (Happy Reggae Backgroound Music) |  Album Cover by L!FE">
+                    
+                    <!--Music Play Button with (Absolute Positioning)-->
+                    <div class="curated-genre-player-wrapper">
+                        <audio id="curated-genre-song" style="display: none;">
+                            <source src="Audio/soundbay - Island Breeze (Happy Reggae Backgroound Music).mp3" type="audio/mp3">
+                        </audio>
+                        <div class="curated-genre-song-box">
+            
+            
+                        <div class="curated-genre-song-description-wrapper">
+                            <div class="curated-genre-song-name-wrapper">
+                                <p class="curated-genre-song-name">soundbay - Island Breeze</p>
+                            </div>
+                        </div>
+
+                        <div class="curated-genre-song-player-wrapper">
+                            <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
+                                <i class="fa fa-play" id="cgs-playIcon"></i>
+                            </button>
+                            
+                            <input type="range" value="0" id="cgs-progress" class="cgs-progress">
+                            </div>
+                            <p class="remainingTime" id="remainingTime">2:40</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
-                    <h3 class="curated-genres-ablum-title">REGGAE</h3>
+                    <h3 class="curated-genres-ablum-title">LO-FI</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="frontend-soundz-playlist-cta-wrapper">
+            <div class="frontend-soundz-playlist-cta-header">
+                <div class="frontend-soundz-playlist-cta-img-wrapper">
+                    <img src="Images/Content/FrontEnd Soundz Logo.png" alt="FrontEnd Soundz Logo">
+                </div>
+                <div class="frontend-soundz-playlist-cta-content">
+                    <div class="frontend-soundz-playlist-cta-title-wrapper">
+                        <h1 class="frontend-soundz-playlist-cta-title">FRONTEND SOUNDZ PLAYLIST</h1>
+                    </div>
+                    <div class="frontend-soundz-playlist-cta-description-wrapper">
+                        <p class="frontend-soundz-playlist-cta-description">FRONTEND SOUNDZ PLAYLIST</p>
+                        <p class="frontend-soundz-playlist-cta-description">FRONTEND SOUNDZ PLAYLIST</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -580,7 +737,6 @@
       <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8WFZwUXRnMlFmdm98fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitars">
     </div>
 </div>
-
 
 
 
