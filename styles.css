@@ -1241,6 +1241,217 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
 /*End of Play Button*/
 
+#frontend-soundz-playlist-section {
+    margin-top: 10rem;
+}
+
+.frontend-soundz-playlist-wrapper {
+    background-color: var(--genre-edm-purple);
+    padding: 3rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.frontend-soundz-playlist-preview {
+    border-top: 15px solid white;
+    background-color: var(--darker-blue-primary);
+    display: grid;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.frontend-soundz-playlist-status-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontend-soundz-playlist-status {
+    font-family: var(--ff-Jaldi);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.frontend-soundz-playlist-preview-track-wrapper {
+    display: grid;
+    place-content: start;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.frontend-soundz-playlist-preview-track-img-wrapper {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.frontend-soundz-playlist-preview-track-description-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.frontend-soundz-playlist-preview-track-description {
+    display: grid;
+    line-height: 26px;
+}
+
+.frontend-soundz-playlist-preview-track-name {
+    font-family: var(--ff-Jaldi);
+    font-size: 25px;
+}
+
+.frontend-soundz-playlist-preview-track-artist {
+    font-family: var(--ff-Jaldi);
+}
+
+.frontend-soundz-playlist-preview-track-img-wrapper img {
+    width: 350px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.frontend-soundz-playlist-preview-mood-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.frontend-soundz-playlist-preview-mood {
+    background-color: white;
+    padding: 0px 15px;
+    color: var(--darker-blue-primary);
+    font-family: var(--ff-Jaldi);
+}
+
+.frontend-soundz-playlist-preview-player-box {
+    position: relative;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.frontend-soundz-playlist-preview-player-box .curated-genre-song-play-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding-block: 10px;
+    border-radius: 150px;
+    background-color: white;
+    width: 100%;
+}
+
+.frontend-soundz-playlist-preview-player-box .curated-genre-song-play-button i {
+    color: var(--darker-blue-primary);
+    font-size: 22px;
+}
+
+.frontend-soundz-playlist-preview-player-box #cgs-progress {
+    background-color: var(--genre-edm-purple);
+    margin: 0;
+}
+
+.frontend-soundz-playlist-c2 {
+    outline: var(--outline);
+    width: 100%;
+    display: grid;
+}
+
+.frontend-soundz-playlist-c2-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontend-soundz-playlist-c2-logo-wrapper img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.frontend-soundz-playlist-heading {
+    line-height: 40px;
+    font-family: var(--ff-Jaldi);
+    color: var(--title-purple);
+    font-size: 40px;
+}
+
+.frontend-soundz-playlist-heading span {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/**/
+.frontend-soundz-playlist-cta-wrapper {
+    display: flex;
+}
+
+.frontend-soundz-playlist-cta-header {
+    display: flex;
+    align-items: center;
+}
+
+.frontend-soundz-playlist-cta-img-wrapper img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.frontend-soundz-playlist-cta-content {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+}
+
+.frontend-soundz-playlist-cta-content > * {
+    font-family: var(--ff-Jaldi);
+    line-height: 55px;
+}
+
+.frontend-soundz-playlist-cta-title {
+    font-size: 50px;
+    text-decoration: overline;
+    color: var(--title-purple);
+}
+
+.ball {
+    top: -28px;
+    right: 107px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: var(--darker-blue-primary);
+    position: absolute;
+}
+
+.frontend-soundz-playlist-cta-description {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: lighter;
+}
+
+.fotn-card-one-playlist-link-wrapper .fotn-card-one-link {
+    color: white;
+}
+
+
+/**/
 
 
 
