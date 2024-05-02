@@ -1176,7 +1176,7 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     align-items: center;
     background-color: var(--genre-edm-purple);
     border-radius: 150px;
-    bottom: 80px;
+    bottom: 85px;
     right: 5px;
 }
 
@@ -1267,7 +1267,6 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 }
 
 .music-library-header-content {
-    outline: var(--outline);
     position: absolute;
     width: 100%;
     display: grid;
@@ -1278,12 +1277,33 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
+    animation-name: headerCnt;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes headerCnt {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .music-library-title {
     color: white;
     font-family: var(--ff-Noto);
     font-size: 100px;
+}
+
+.music-library-sub-title {
+    color: rgb(255, 255, 255, 0.6);
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 30px;
 }
 
 
