@@ -10,18 +10,16 @@
 
     <!--Plyr CSS & JS CDN Links-->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
     <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b5390d3db8.js" crossorigin="anonymous"></script>
-
+    
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jaldi:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Footer Style.css">
 </head>
 <body>
 
@@ -52,9 +50,42 @@
             <!-- User login|sign up -->
             <div class="navibar-user-space">
                 <i class="fa-solid fa-user" style="color: #fcfcfc;"></i> 
-                <a class="login-btn" href="login.html">Login</a>
+                <!-- <a class="login-btn" href="login.html">Login</a>
+                <button onclick="myFunction()">login</button> -->
+                
+
+                <button id="login-btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                
+                <div id="login" class="modal">
+                  
+                  <form class="modal-content animate" action="/action_page.php" method="post">
+                    
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      
+                    </div>
+                
+                    <div class="container">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+                
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+                        
+                      <button type="submit">Login</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                    </div>
+                
+                    <div class="container" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                      <span class="psw">Forgot <a href="#">Forgot password?</a></span>
+                    </div>
+                  </form>
+                </div>
+                
                 <span id="welcome-back" style="display: none;">Welcome Back</span>
-            </div>
+        </div>
 
             <div class="search-bar-wrapper" onclick="searchOpen()" style="display: none;">
 
@@ -462,7 +493,7 @@
                     </div>
                 </div>
                 <div class="curated-genres-ablum-title-wrapper">
-                    <h3 class="curated-genres-ablum-title">EDM</h3>
+                <a href="EDM.html"><h3 class="curated-genres-ablum-title">EDM</h3></a>
                 </div>
             </div>
 
@@ -667,6 +698,114 @@
             </div>
         </div>
 
+            <script>
+                //Fresh On The Net - Play Button (Do not edit this button)
+let progress = document.getElementById("progress");
+let song = document.getElementById("song");
+let playIcon = document.getElementById("playIcon");
+
+let rTime = document.getElementById("rTime");
+
+song.onloadedmetadata = function(){
+    song.pause();
+    progress.max = song.duration;
+    progress.value = song.currentTime;
+}
+
+function playPause(){
+    if(playIcon.classList.contains("fa-pause")){
+        song.pause();
+        playIcon.classList.remove("fa-pause");
+        playIcon.classList.add("fa-play");
+    } else {
+        song.play();
+        playIcon.classList.add("fa-pause");
+        playIcon.classList.remove("fa-play");
+    }
+}
+
+if(song.play()){
+  setInterval(()=>{
+      progress.value = song.currentTime;
+  },500);
+}
+
+progress.onchange = function(){
+    song.play();
+    song.currentTime = progress.value;
+    playIcon.classList.add("fa-pause");
+    playIcon.classList.remove("fa-play");
+}
+                // Select all curated genres album wrappers
+const curatedGenreAlbums = document.querySelectorAll(".curated-genres-album-wrapper");
+
+curatedGenreAlbums.forEach(album => {
+    const playButton = album.querySelector(".curated-genre-song-play-button");
+    const audioElement = album.querySelector("audio");
+    const playIconElement = playButton.querySelector("i");
+    const progressBar = album.querySelector(".cgs-progress");
+    const remainingTime = album.querySelector(".remainingTime");
+
+    playButton.addEventListener("click", () => {
+      // Pause all songs
+      curatedGenreAlbums.forEach(album => {
+          const otherAudioElement = album.querySelector("audio");
+          const otherPlayButton = album.querySelector(".curated-genre-song-play-button");
+          const otherPlayIconElement = otherPlayButton.querySelector("i");
+          if (otherAudioElement !== audioElement) {
+              otherAudioElement.pause();
+              otherPlayIconElement.classList.remove("fa-pause");
+              otherPlayIconElement.classList.add("fa-play");
+              otherPlayButton.classList.remove("active");
+          }
+      });
+
+      // Toggle play/pause for the clicked song
+      if (audioElement.paused) {
+          audioElement.play();
+          playIconElement.classList.remove("fa-play");
+          playIconElement.classList.add("fa-pause");
+          playButton.classList.add("active");
+      } else {
+          audioElement.pause();
+          playIconElement.classList.remove("fa-pause");
+          playIconElement.classList.add("fa-play");
+          playButton.classList.remove("active");
+      }
+  });
+
+  audioElement.addEventListener("timeupdate", () => {
+      const progress = (audioElement.currentTime / audioElement.duration) * 100;
+      progressBar.value = progress;
+      
+      // Calculate remaining time
+      const remaining = audioElement.duration - audioElement.currentTime;
+      const minutes = Math.floor(remaining / 60);
+      const seconds = Math.floor(remaining % 60);
+      const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      remainingTime.textContent = formattedTime;
+  });
+
+  progressBar.addEventListener("input", () => {
+      // Calculate the new time based on the progress bar value
+      const newTime = (progressBar.value / 100) * audioElement.duration;
+      // Update the audio element's current time
+      audioElement.currentTime = newTime;
+  });
+
+  audioElement.onended = () => {
+      playIconElement.classList.remove("fa-pause");
+      playIconElement.classList.add("fa-play");
+      playButton.classList.remove("active");
+      progressBar.value = 0;
+      remainingTime.textContent = "0:00";
+  };
+});
+
+
+
+            </script>
+
         <div class="frontend-soundz-playlist-cta-wrapper">
             <div class="frontend-soundz-playlist-cta-header">
                 <div class="frontend-soundz-playlist-cta-img-wrapper">
@@ -688,9 +827,6 @@
 
 <!-- More from FrontEnd Soundz -->
 <section id="grid-section">
-
-
-
 
 <div class="grid">
      
@@ -724,7 +860,10 @@
             <p>Want to catch these rising stars live?</p>
             <p> follow artist profiles and find upcoming shows, ticket prices and venues!</p>
         </div>
-        <button id="button2">Touring Dates & More</button>
+       
+        <a id="button2" href="explore.html">Touring Dates & More</a>
+     
+        <!--A tags: Type (a) then tab--> 
 </div>
  
  <div class="card">
@@ -733,72 +872,56 @@
         <p>Tired of the same old algorithms dictating your music discovery? How about finding something fresh, something that ignites your passion for new sounds and hidden gems  instead?</p>
         <p> Explore <b>Fresh on the Net</b> and unearth the hidden gems shaping the future of sound.</p>
       </div>
-    <button id="button3">Collaborate</button>
+    <a id="button3" href="explore.html">Collaborate</a>
 </div>
  
  <div class="card">
       <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8WFZwUXRnMlFmdm98fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitars">
     </div>
 </div>
-
-
-
-
-
-
+</section>   
 
 </main>
 
-<footer> 
-    </section>  
-
-     <section class="footer">
-        <div class="footer-row">
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul class="links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Jobs</a></li>
-                </ul>
+<section class="footer">
+    <div class="footer-row">
+        <div class="logo-col">
+        <a class="logo-link" href="index.html">
+            <img class="logo"  src="Images/Content/FrontEnd Soundz Logo.png" alt="">
+        </a>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-heading">Communities</h4>
+            <ul class="footer-links-list">
+                <li class="footer-links"><a href="#">Music Library</a></li>
+                <li class="footer-links"><a href="#">Explore</a></li>
+                <li class="footer-links"><a href="#">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-heading">Useful Links</h4>
+            <ul class="footer-links-list">
+                <li class="footer-links"><a href="#">Support</a></li>
+                <li class="footer-links"><a href="#">Free Mobile App</a></li>
+                <li class="footer-links"><a href="#">Privacy Policy</a></li>
+                <li class="footer-links"><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-heading">Newsletter</h4>
+            <div class="newsletter-wrapper">
+                <p class="newsletter-text">
+                    Subscribe to our newsletter for a monthly dose of news and updates about your favourite artists.
+                </p>
+                <form action="#">
+                    <input id="newsletterEl" type="email" placeholder="Your e-mail" required>
+                    <button type="text">SUBSCRIBE</button>
+                </form>
             </div>
-<div class="footer-col">
-    <h4>Communities</h4>
-    <ul class="links">
-        <li><a href="#">For Artists</a></li>
-        <li><a href="#">Music Lovers Forum</a></li>
-        <li><a href="#">Advertising</a></li>
-        <li><a href="#">Investors</a></li>
-    </ul>
-</div>
-<div class="footer-col">
-    <h4>Useful Links</h4>
-    <ul class="links">
-<li><a href="#">Support</a></li>
-<li><a href="#">Free Mobile App</a></li>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Cookies</a></li>
-    </ul>
-</div>
-<div class="footer-col">
-    <h4>Newsletter</h4>
-        <p>
-            Subscribe to our newsletter for a monthly dose of news and updates about your favourite artists.
-        </p>
-        <Form action="#">
-            <input type="text" placeholder="Your e-mail" required>
-            <button type="submit">SUBSCRIBE</button>   
-        </Form>
-        <div class="icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
         </div>
+    </div>
+</section>
 
-</div>
-        </div>
-    </section>
-</footer>
-
-<script src="script.js"></script>
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
