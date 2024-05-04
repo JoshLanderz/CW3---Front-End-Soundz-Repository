@@ -161,7 +161,17 @@ loginButton.addEventListener('click', handleLogin);
 <main>
 
     <section id="frontend-soundz-playlist-section">
-        <div class="frontend-soundz-playlist-wrapper">
+        <div class="frontend-soundz-playlist-list-selection-wrapper">
+        </div>
+        <div class="frontend-soundz-playlist-wrapper" style="position: relative;">
+            <button class="fes-sel-btn-1" id="fes-sel-btn-1" onclick="toggleSelection('fes-sel-btn-1')">
+                <i class="fa fa-caret-left"></i>
+            </button>
+
+            <button class="fes-sel-btn-2" id="fes-sel-btn-2" onclick="toggleSelection('fes-sel-btn-2')">
+                <i class="fa fa-caret-right"></i>
+            </button>
+
             <div class="frontend-soundz-playlist-preview">
                 <div class="frontend-soundz-playlist-status-wrapper">
                     <p class="frontend-soundz-playlist-status">NOW PLAYING</p>
@@ -205,7 +215,7 @@ loginButton.addEventListener('click', handleLogin);
                 </div> 
             
                 <div class="frontend-soundz-playlist-list-wrapper">
-                    <ul class="frontend-soundz-playlist-list">
+                    <ul id="ul1" class="frontend-soundz-playlist-list">
                         <li class="frontend-soundz-playlist-list-element">
                             <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                 <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
@@ -360,7 +370,7 @@ loginButton.addEventListener('click', handleLogin);
                                             <p class="frontend-soundz-playlist-list-element-artitst-name">soundbay</p>
                                         </div>
                                         <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
-                                            <p class="frontend-soundz-playlist-list-element-song-genre">INDEPENDENT</p>
+                                            <p class="frontend-soundz-playlist-list-element-song-genre">REGGAE</p>
                                         </div>
                                     </div>
                                     <div class="frontend-soundz-playlist-preview-mood-wrapper">
@@ -370,9 +380,176 @@ loginButton.addEventListener('click', handleLogin);
                             </div>
                         </li>
                     </ul>
+
+                    <ul id="ul2" class="frontend-soundz-playlist-list" style="display: none;">
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Nico Anuch - Your Eyes.jpg" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-7" onclick="playPauses(7)">
+                                            <i class="fa fa-play" id="fes-Icon-7"></i>
+                                        </button>
+                                        <audio id="fes-song-7">
+                                            <source src="Audio/Nico Anuch - Your Eyes [Thematic].mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Your Eyes</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Nico Anuch</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">EDM</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Energetic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Lily Fitts - Buying Time.jpg" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-8" onclick="playPauses(8)">
+                                            <i class="fa fa-play" id="fes-Icon-8"></i>
+                                        </button>
+                                        <audio id="fes-song-8">
+                                            <source src="Audio/Lily Fitts - Buying Time [Thematic].mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Buying Time</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Lily Fitts</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">INDEPENDENT FOLK</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Foot Tapper</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Billy Jesus - Could Have Been.png" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-9" onclick="playPauses(9)">
+                                            <i class="fa fa-play" id="fes-Icon-9"></i>
+                                        </button>
+                                        <audio id="fes-song-9">
+                                            <source src="Audio/Billy Jesus - Could Have Been.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Could Have Been</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Billy Jesus</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">ALTERNATIVE</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Expiremental</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Tiana Kocher - Daisies.jpg" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-10" onclick="playPauses(10)">
+                                            <i class="fa fa-play" id="fes-Icon-10"></i>
+                                        </button>
+                                        <audio id="fes-song-10">
+                                            <source src="Audio/Tiana Kocher - Daisies.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Daisies</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Tiana Kocher</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">RHYTHYM & BLUES</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Aesthetic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Black Jade - Galaxy Stars.jpg" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-11" onclick="playPauses(11)">
+                                            <i class="fa fa-play" id="fes-Icon-11"></i>
+                                        </button>
+                                        <audio id="fes-song-11">
+                                            <source src="Audio/Black Jade - Galaxy Stars.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Galaxy Stars</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Black Jade</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">ALTERNATIVE</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Expiremental</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="frontend-soundz-playlist-list-element">
+                                <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                    <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                        <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Xan Griffin - Mountain Dirve.jpg" alt="">
+                                        <button class="fes-list-btn" id="fes-playlist-play-btn-12" onclick="playPauses(12)">
+                                            <i class="fa fa-play" id="fes-Icon-12"></i>
+                                        </button>
+                                        <audio id="fes-song-12">
+                                            <source src="Audio/Xan Griffin - Mountain Drive.mp3" type="audio/mp3">
+                                        </audio>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-list-element-content">
+                                        <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                            <div class="frontend-soundz-playlist-list-element-song-details">
+                                                <h1 class="frontend-soundz-playlist-list-element-song-name">Mountain Drive</h1>
+                                                <p class="frontend-soundz-playlist-list-element-artitst-name">Xan Griffin</p>
+                                            </div>
+                                            <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                                <p class="frontend-soundz-playlist-list-element-song-genre">EDM</p>
+                                            </div>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                            <span class="frontend-soundz-playlist-preview-mood">Chill</span>
+                                            <span class="frontend-soundz-playlist-preview-mood">Ambient</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                    </ul>
+                    
                 </div>    
             </div>
-
         </div>
 
         <script>
@@ -452,6 +629,14 @@ yImgSrc.src = xImgSrc.src;
     let ySongTitle = document.querySelector(".frontend-soundz-playlist-preview-track-name");
     let xSongTitle = document.querySelector("#fes-playlist-play-btn-" + index).closest('.frontend-soundz-playlist-list-element').querySelector('.frontend-soundz-playlist-list-element-song-details .frontend-soundz-playlist-list-element-song-name');
     ySongTitle.textContent = xSongTitle.textContent;
+
+    let yMoodWrapper = document.querySelector(".frontend-soundz-playlist-preview-mood-wrapper");
+    let xMood = document.querySelector("#fes-playlist-play-btn-" + index).closest('.frontend-soundz-playlist-list-element').querySelector('.frontend-soundz-playlist-list-element-preview-mood');
+
+    // Update mood text content
+    yMoodWrapper.textContent = xMood.textContent;
+    
+
 }
 
 
@@ -478,11 +663,6 @@ fesRemainingTime.textContent = "0:00";
         </script>
     </section>
 
-    <hr class="section-break-hr">
-
-
-    <hr class="section-break-hr">
-
 </main>
 
 <section class="footer">
@@ -495,8 +675,8 @@ fesRemainingTime.textContent = "0:00";
         <div class="footer-col">
             <h4 class="footer-col-heading">Communities</h4>
             <ul class="footer-links-list">
-                <li class="footer-links"><a href="#">Music Library</a></li>
-                <li class="footer-links"><a href="#">Explore</a></li>
+                <li class="footer-links"><a href="explore.html">Music Library</a></li>
+                <li class="footer-links"><a href="">Discord</a></li>
                 <li class="footer-links"><a href="#">About Us</a></li>
             </ul>
         </div>
