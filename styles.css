@@ -47,6 +47,17 @@ header {
     font-family: var(--ff-Jaldi);
 }
 
+#explore-header {
+    position: relative;
+    overflow: hidden;
+    height: 730px;
+    width: 100%;
+    background-image: url("Images/Content/jack-hamilton-CMnNiQBkwBI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 18%;
+    font-family: var(--ff-Jaldi);
+}
 /*Ignore This*/
 @media (max-width: 768px) {
     header {
@@ -361,15 +372,175 @@ ul, li {
     transition: linear 0.2s;
 }
 
-.search-and-user-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-and-user-wrapper-overlay {
+    position: fixed;
+    display: grid;
+    outline: var(--outline);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, 0.8);
 }
 
 .search-and-user-wrapper {
-    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(39, 6, 88, 0.682);
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
+
+
+.modal-content {
+    display: grid;
+    padding: 1rem;
+    background: none;
+}
+
+.naivbar-login-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#login-welcome-text {
+    color: white;
+}
+
+.login-user-psw-wrapper {
+    display: grid;
+    gap: 10px;
+}
+
+.login-confirmation-wrapper {
+    display: grid;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.loginBtn {
+    background-color: var(--genre-edm-purple);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: var(--ff-Jaldi);
+    padding: 5px 15px;
+    border-radius: 150px;
+}
+
+.loginFormBtn {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    border: none;
+    background: none;
+    border: 1px solid var(--genre-edm-purple);
+    padding: 10px;
+    border-radius: 150px;
+    color: white;
+    font-family: var(--ff-Jaldi);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: linear 0.1s;
+}
+
+.loginFormBtn:hover {
+    background-color: var(--genre-edm-purple);
+    transition: linear 0.1s;
+}
+
+.loginFormBtn:nth-child(1) {
+    margin-top: 10px;
+    background-color: var(--genre-edm-purple);
+}
+
+
+.remember-me-wrapper {
+    display: flex;
+    place-content: start;
+}
+
+.remember-me {
+    font-family: var(--ff-Jaldi);
+    color: white;
+}
+
+.modal-content label {
+    color: white;
+    font-family: var(--ff-Jaldi);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 100%;
+    height: 100%;
+    /* Could be more or less, depending on screen size */
+  }
+  
+  .container 
+  {
+    height: 40%;
+    text-align: justify;
+
+  ;}
+
+    
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+
 
 .search-bar-wrapper {
     position: relative;
@@ -461,75 +632,6 @@ ul, li {
     color: var(--light-purple-primary);
     outline: none;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%;
-    height: 80%;
-    /* Could be more or less, depending on screen size */
-  }
-  
-  .container 
-  {height: 40%;
-    text-align: justify;
-    
-    
-   
-  ;}
-
-    
-  /* The Close Button */
-  .close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  /* Close button on hover */
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
-  
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-  }
-  
-  @keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-  }
-
 
 /*Start of Main Content*/
 
@@ -1100,7 +1202,6 @@ section {
 }
 
 .curated-genres-ablum {
-    cursor: pointer;
     position: relative;
     width: 280px;
 }
@@ -1147,14 +1248,6 @@ section {
     font-size: 18px;
 }
 
-.card .more-from-fs-span {
-    color: var(--garrison-red);
-    width: fit-content;
-    /*trying to make the span text red in the css. oh okay
-    there we go .big up yoself!
-
-    */
-}
 
 .grid h2 {
     color: var(--genre-edm-purple);
@@ -1219,6 +1312,11 @@ section {
     align-items: center;
     padding: 20px 0px, 0px 0px;
 }
+
+.card:nth-child(5) {
+    padding-bottom: 45px;
+}
+
 
 .card img {
     height: 300px;
@@ -1353,12 +1451,13 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 /*End of Play Button*/
 
 #frontend-soundz-playlist-section {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    max-height: 780px;
 }
 
 .frontend-soundz-playlist-wrapper {
     background-color: var(--genre-edm-purple);
-    padding: 3rem;
+    padding: 3rem 3rem 5rem 3rem;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -1370,6 +1469,7 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     display: grid;
     padding: 2rem;
     gap: 2rem;
+    height: 575px;
 }
 
 .frontend-soundz-playlist-status-wrapper {
@@ -1502,6 +1602,8 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
 .frontend-soundz-playlist-list-wrapper {
     display: grid;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -1513,10 +1615,44 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     gap: 10px;
 }
 
+.fes-sel-btn-1, .fes-sel-btn-2 {
+    background: none;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.fes-sel-btn-2 {
+    left: 940px;
+}
+
+.fes-sel-btn-1 i, .fes-sel-btn-2 i {
+    position: absolute;
+    font-size: 25px;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    color: var(--darker-blue-primary);
+    transform: translate(-50%, -50%);
+}
+
 .frontend-soundz-playlist-list-element {
     margin: 0;
     padding: 0;
     position: relative;
+}
+
+
+#ul2 li {
+    margin-bottom: 10px;
+    padding: 0px;
 }
 
 .frontend-soundz-playlist-list-element-content-wrapper {
@@ -1623,7 +1759,16 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     font-weight: bold;
 }
 
-
+.frontend-soundz-playlist-list-block {
+    display: grid;
+    gap: 10px;
+}
+   
+#frontend-soundz-playlist-list-block-2 {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
 
 
 
@@ -1785,7 +1930,6 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     font-size: 14px;
     font-family: var(--ff-Jaldi);
 }
-
 
 
 /*Footer*/
