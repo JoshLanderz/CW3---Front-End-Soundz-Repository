@@ -1,5 +1,5 @@
 /*
-Line 1226: Music Library Page
+Line 1638: Music Library Page
 */
 
 
@@ -32,6 +32,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     background-color: var(--black-currant);
+    padding-bottom: 0;
 }
 
 header {
@@ -71,6 +72,43 @@ a {
 
 ul, li {
     list-style-type: none;
+}
+
+#blocker-hero-wrapper {
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    margin-top: 10rem;
+    position: relative;
+}
+
+#blocker-logo-wrapper .logo {
+    width: 400px;
+    height: 400px;
+}
+
+#blocker-logo-wrapper {
+    position: relative;
+}
+
+#blocker-logo-wrapper .logo-name {
+    position: relative;
+    font-size: 50px;
+    line-height: 35px;
+    font-family: var(--ff-Jaldi);
+}
+
+#blocker-logo-wrapper .logo-span {
+    bottom: -30px;
+    font-size: 18px;
+}
+
+.site-progress {
+    background-color: white;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 100px;
+    left: 400px;
 }
 
 .hero-wrapper {
@@ -409,12 +447,13 @@ ul, li {
 .navibar-menu-list-item {
     width: max-content;
 }
+#login-btn{background: none;border:none;outline: solid 0.1px white;}
 
-.navibar-menu-list-item a, .login-btn {
+.navibar-menu-list-item a, #login-btn {
     color: white;
 }
 
-.navibar-menu-list-item a:visited, .login-btn:visited {
+.navibar-menu-list-item a:visited, #login-btn:visited {
     color: white;
 }
 
@@ -423,6 +462,73 @@ ul, li {
     outline: none;
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    /* Could be more or less, depending on screen size */
+  }
+  
+  .container 
+  {height: 40%;
+    text-align: justify;
+    
+    
+   
+  ;}
+
+    
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
 
 
 /*Start of Main Content*/
@@ -1076,7 +1182,12 @@ section {
 }
 
 
-.grid #button2, #button3 {
+
+    /* padding: 10px;
+    margin: 4px; */
+
+
+#button2, #button3 {
     background-color: var(--darker-blue-primary);
     color: white;
     min-width: 230px;
@@ -1328,6 +1439,7 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     padding: 0px 15px;
     color: var(--darker-blue-primary);
     font-family: var(--ff-Jaldi);
+    z-index: 1;
 }
 
 .frontend-soundz-playlist-preview-player-box {
@@ -1336,9 +1448,10 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     gap: 1.5rem;
 }
 
-.frontend-soundz-playlist-preview-player-box .curated-genre-song-play-button {
+.frontend-soundz-playlist-preview-player-box .fes-playlist-btn {
     cursor: pointer;
     display: flex;
+    justify-content: center;
     align-items: center;
     border: none;
     background: none;
@@ -1348,32 +1461,32 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     width: 100%;
 }
 
-.frontend-soundz-playlist-preview-player-box .curated-genre-song-play-button i {
+.frontend-soundz-playlist-preview-player-box .fes-playlist-btn i {
     color: var(--darker-blue-primary);
     font-size: 22px;
 }
 
-.frontend-soundz-playlist-preview-player-box #cgs-progress {
-    background-color: var(--genre-edm-purple);
-    margin: 0;
-}
-
 .frontend-soundz-playlist-c2 {
-    outline: var(--outline);
     width: 100%;
     display: grid;
+    place-content: start;
+    justify-content: center;
 }
 
 .frontend-soundz-playlist-c2-header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
 }
 
 .frontend-soundz-playlist-c2-logo-wrapper img {
     object-fit: cover;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    margin-left: -20px;
 }
 
 .frontend-soundz-playlist-heading {
@@ -1385,6 +1498,129 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
 .frontend-soundz-playlist-heading span {
     color: white;
+}
+
+.frontend-soundz-playlist-list-wrapper {
+    display: grid;
+    width: 100%;
+}
+
+.frontend-soundz-playlist-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.frontend-soundz-playlist-list-element {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.frontend-soundz-playlist-list-element-content-wrapper {
+    background-color: var(--darker-blue-primary);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    height: 50px;
+}
+
+.frontend-soundz-playlist-list-element-content-img-wrapper {
+    position: relative;
+}
+
+.frontend-soundz-playlist-list-element:hover .fes-list-btn {
+    display: flex;
+}
+
+.fes-list-btn {
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    border: none;
+    background-color: var(--genre-edm-purple);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.fes-list-btn i {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.frontend-soundz-playlist-list-element-content-img-wrapper img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.frontend-soundz-playlist-list-element-content {
+    display: grid;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.frontend-soundz-playlist-list-element::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+    width: 100%;  /* Covers a quarter of the width */
+    background-image: url('Images/Song Images/Bodaisaffa Music - Against the Wall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.frontend-soundz-playlist-list-element-song-details-wrapper {
+    display: flex;
+    place-content: space-between;
+}
+
+.frontend-soundz-playlist-list-element-song-details {
+    line-height: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.frontend-soundz-playlist-list-element-song-details > *  {
+    font-family: var(--ff-Jaldi);
+    margin: 0;
+    padding: 0;
+}
+
+.frontend-soundz-playlist-list-element-song-name {
+    font-size: 18px;
+}
+
+.frontend-soundz-playlist-list-element-artitst-name {
+    font-size: 14px;
+}
+.frontend-soundz-playlist-list-element-song-genre-wrapper {
+    line-height: 15px;
+}
+
+.frontend-soundz-playlist-list-element-song-genre {
+    font-family: var(--ff-Jaldi);
+    font-weight: bold;
 }
 
 
@@ -1450,6 +1686,12 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     color: white;
 }
 
+.frontend-soundz-playlist-list-element-content .frontend-soundz-playlist-preview-mood-wrapper {
+    width: fit-content;
+    position: absolute;
+    right: -0px;
+    bottom: 0px;
+}
 
 /**/
 
@@ -1517,3 +1759,203 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     line-height: 30px;
 }
 
+#fes-progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background-color: var(--genre-edm-purple);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#fes-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--darker-blue-primary);
+    border: 2px solid #fff;
+}
+
+
+#fes-remaining-time {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-size: 14px;
+    font-family: var(--ff-Jaldi);
+}
+
+
+
+/*Footer*/
+.footer {
+    min-height: 200px;
+    background-color: var(--darker-blue-primary-nav-transparent);
+    background-image: url('Images/Content/bogomil-mihaylov-ekHSHvgr27k-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    border-radius: 6px;
+    padding: 60px 60px 360px 60px;
+    margin: 0;
+    margin-top: 15rem;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-col {
+    width: calc(25% - 20px); /* Adjust width as needed */
+    display: grid;
+    gap: 10px;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    place-content: start;
+    height: 205px;
+}
+
+.footer-col:last-child {
+  display: grid;
+  place-content: start;
+}
+
+.newsletter-wrapper {
+    display: grid;
+    align-items: flex-start;
+    place-content: start;
+    gap: 0px;
+}
+
+.newsletter-text {
+    font-family: var(--ff-Jaldi);
+    line-height: 20px;
+}
+
+#newsletterEl {
+    color: white;
+    font-family: var(--ff-Jaldi);
+}
+
+#newsletterEl::placeholder {
+    color: var(--light-purple-primary);
+}
+
+.logo-col {
+    display: grid;
+    margin-right: 5rem;
+    height: 100%;
+}
+
+.logo-link {
+    margin-top: -28px;
+}
+
+.footer-col-heading {
+    font-family: var(--ff-Jaldi);
+    width: 100%;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--title-purple);
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links a {
+    font-family: var(--ff-Jaldi);
+    color: white;
+}
+
+.footer-links-list {
+    display: grid;
+    place-content: start;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.logo-col img {
+    width: 200px;
+    height: 200px;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: white;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #703ACF;
+    caret-color: #703ACF;
+    color: #703ACF;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #703ACF;
+}
+
+.footer-col form button {
+    background: #bfbfbf;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+    background: #703ACF;
+}
+
+.footer-col .icons i:hover {
+    color: #bfbfbf;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px;
+    }
+
+    .footer .footer-row {
+        padding: 0 30px;
+        gap: 1rem;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0 0;
+    }
+}
