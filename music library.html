@@ -102,16 +102,13 @@
                     </div>
                 </div>
                 <div class="frontend-soundz-playlist-preview-player-box">
-                    <audio id="curated-genre-song" style="display: none;">
-                        <source src="Audio/Taylor Belle - Love Letters to Myself [Thematic].mp3" type="audio/mp3">
-                    </audio>
 
-                    <input type="range" value="0" id="cgs-progress" class="cgs-progress">
-
-                    <p class="remainingTime" id="remainingTime">2:37</p>
+                    <input type="range" value="0" id="cgs-progress" class="cgs-progress" style="display: none;">
+                    <input type="range" value="0" id="fes-progress" class=".fes-progress">
+                    <p class="fes-remaining-time" id="fes-remaining-time"></p>
                         
-                    <button onclick="curatedGenresPlayPause()" class="curated-genre-song-play-button" id="cgs-play-btn">
-                        <i class="fa fa-play" id="cgs-playIcon"></i>
+                    <button class="fes-playlist-btn" id="fes-playlist-btn" style="display: none;">
+                        <i class="fa fa-play" id="fes-playlist-Icon"></i>
                     </button>
                 </div>
                         
@@ -138,45 +135,173 @@
                             <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                 <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                     <img src="Images/Song Images/Bodaisaffa Music - Against the Wall.jpg" alt="">
+                                    <button class="fes-list-btn" id="fes-playlist-play-btn-1" onclick="playPauses(1)">
+                                        <i class="fa fa-play" id="fes-Icon-1"></i>
+                                    </button>
+                                    <audio id="fes-song-1">
+                                        <source src="Audio/Bodisaffa Music - Against the Wall [Thematic].mp3" type="audio/mp3">
+                                    </audio>
+                                </div>
+                                <div class="frontend-soundz-playlist-list-element-content">
+                                    <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                        <div class="frontend-soundz-playlist-list-element-song-details">
+                                            <h1 class="frontend-soundz-playlist-list-element-song-name">Against The Wall</h1>
+                                            <p class="frontend-soundz-playlist-list-element-artitst-name">Bodisaffa Music</p>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                            <p class="frontend-soundz-playlist-list-element-song-genre">EDM</p>
+                                        </div>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                        <span class="frontend-soundz-playlist-preview-mood">Energetic</span>
+                                    </div>
                                 </div>
                             </div>
                         </li>
-
-
-
                         <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
+                            <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                    <img src="Images/Song Images/Lyle Kam - internet crush.jpg" alt="">
+                                    <button class="fes-list-btn" id="fes-playlist-play-btn-2" onclick="playPauses(2)">
+                                        <i class="fa fa-play" id="fes-Icon-2"></i>
+                                    </button>
+                                    <audio id="fes-song-2">
+                                        <source src="Audio/Lyle Kam - internet crush [Thematic].mp3" type="audio/mp3">
+                                    </audio>
+                                </div>
+                                <div class="frontend-soundz-playlist-list-element-content">
+                                    <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                        <div class="frontend-soundz-playlist-list-element-song-details">
+                                            <h1 class="frontend-soundz-playlist-list-element-song-name">internet crush</h1>
+                                            <p class="frontend-soundz-playlist-list-element-artitst-name">Lyle Kam</p>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                            <p class="frontend-soundz-playlist-list-element-song-genre">EDM</p>
+                                        </div>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                        <span class="frontend-soundz-playlist-preview-mood">Energetic</span>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
-                        </li>
-                        <li class="frontend-soundz-playlist-list-element">
-                            <div class="playlist-list-element-content-wrapper"></div>
+                            <div class="frontend-soundz-playlist-list-element-content-wrapper">
+                                <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
+                                    <img src="Images/Song Images/Taylor Belle - Love Letters To Myself.jpg" alt="">
+                                    <button class="fes-list-btn" id="fes-playlist-play-btn-3" onclick="playPauses(3)">
+                                        <i class="fa fa-play" id="fes-Icon-3"></i>
+                                    </button>
+                                    <audio id="fes-song-3">
+                                        <source src="Audio/Taylor Belle - Love Letters to Myself [Thematic].mp3" type="audio/mp3">
+                                    </audio>
+                                </div>
+                                <div class="frontend-soundz-playlist-list-element-content">
+                                    <div class="frontend-soundz-playlist-list-element-song-details-wrapper">
+                                        <div class="frontend-soundz-playlist-list-element-song-details">
+                                            <h1 class="frontend-soundz-playlist-list-element-song-name">internet crush</h1>
+                                            <p class="frontend-soundz-playlist-list-element-artitst-name">Lyle Kam</p>
+                                        </div>
+                                        <div class="frontend-soundz-playlist-list-element-song-genre-wrapper">
+                                            <p class="frontend-soundz-playlist-list-element-song-genre">EDM</p>
+                                        </div>
+                                    </div>
+                                    <div class="frontend-soundz-playlist-preview-mood-wrapper">
+                                        <span class="frontend-soundz-playlist-preview-mood">Energetic</span>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                </div>
+                </div>    
             </div>
-        </div>
 
         </div>
+
+        <script>
+            /*Music Library*/
+            let yprogress = document.getElementById("fes-progress");
+let ysong = document.getElementById("fes-song");
+let yIcon = document.getElementById("fes-Icon-0");
+let fesRemainingTime = document.getElementById("fes-remaining-time");
+
+ysong.onloadedmetadata = function() {
+ysong.pause();
+yprogress.max = ysong.duration;
+// Set initial progress to 0 (avoid potential division by zero)
+yprogress.value = 0;
+const formattedDuration = formatTime(ysong.duration);
+fesRemainingTime.textContent = formattedDuration;
+}
+
+function formatTime(seconds) {
+const minutes = Math.floor(seconds / 60);
+const remainingSeconds = Math.floor(seconds % 60);
+return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+function playPauses(index) {
+    let ysong = document.getElementById("fes-song-" + index);
+    let yIcon = document.getElementById("fes-Icon-" + index);
+    let numberOfSongs = document.getElementsByClassName("fes-list-btn").length;
+
+// Pause any currently playing song
+for (let i = 1; i <= numberOfSongs; i++) {
+    if (i !== index) {
+        let fsong = document.getElementById("fes-song-" + i);
+        let ficon = document.getElementById("fes-Icon-" + i);
+        if (!ficon.classList.contains("fa-play")) {
+            fsong.pause();
+            ficon.classList.remove("fa-pause");
+            ficon.classList.add("fa-play");
+            clearInterval(updateInterval);
+        }
+    }
+}
+
+if (yIcon.classList.contains("fa-pause")) {
+ysong.pause();
+clearInterval(updateInterval);
+yIcon.classList.remove("fa-pause");
+yIcon.classList.add("fa-play");
+} else {
+ysong.play();
+yIcon.classList.add("fa-pause");
+yIcon.classList.remove("fa-play");
+
+}
+      
+updateInterval = setInterval(() => {
+const currentTime = ysong.currentTime;
+const progress = (currentTime / ysong.duration) * 100;  // Calculate progress as a percentage
+yprogress.value = progress;
+const remainingTime = formatTime(ysong.duration - currentTime);
+fesRemainingTime.textContent = remainingTime;
+}, 500);
+}
+
+
+yprogress.addEventListener("input", () => {
+const newTime = (yprogress.value / 100) * ysong.duration;
+ysong.currentTime = newTime;
+});
+
+ysong.addEventListener("timeupdate", () => {
+const progress = (ysong.currentTime / ysong.duration) * 100;
+yprogress.value = progress;
+const remainingTime = formatTime(ysong.duration - ysong.currentTime);
+fesRemainingTime.textContent = remainingTime;
+});
+
+ysong.onended = () => {
+yIcon.classList.remove("fa-pause");
+yIcon.classList.add("fa-play");
+yprogress.value = 0;
+fesRemainingTime.textContent = "0:00";
+};
+
+
+        </script>
     </section>
 
     <hr class="section-break-hr">
