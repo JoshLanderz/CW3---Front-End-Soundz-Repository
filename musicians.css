@@ -47,6 +47,22 @@
 
     --input-text-placeholder-padding: 15px;
 
+
+        /*Fonts*/
+        --ff-Jaldi: "Jaldi", sans-serif;
+    
+        /*Colors*/
+        --black-currant: rgb(14, 5, 15); 
+        --hero-bg-overlay: rgb(14, 5, 15, 0.7);
+        --navibar-bg-transparent: rgb(45, 22, 116, 0.08);
+        --darker-blue-primary: rgb(45, 22, 116);
+        --darker-blue-primary-nav-transparent: rgb(45, 22, 116, 0.97);
+        --darker-blue-primary-transparent: rgb(45, 22, 116, 0.5);
+        --light-purple-primary: rgb(146, 113, 194);
+        --title-purple: rgb(163, 118, 243);
+        --garrison-red: rgb(132, 19, 19);
+        --genre-edm-purple: rgb(112, 58, 207, 0.6);
+
     }
 
   /*::-webkit-scrollbar{
@@ -91,7 +107,6 @@
 
   #section2 {
     margin-top: var(--section-margin-top);
-    padding-inline: var(--section-padding-inline);
     animation-name: section2-animation;
   }
   
@@ -116,10 +131,10 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1rem;
     width: fit-content;
-    background-color: var(--paragraph-text-clr);
+    background-color: var(--darker-blue-primary-nav-transparent);
     position: relative;
   }
 
@@ -131,7 +146,7 @@
     position: absolute;
     bottom: -360px;
     right: 0;
-    background-color: rgb(248, 248, 248, 0.90);
+    background-color: var(--darker-blue-primary-nav-transparent);
     gap: 20px;
   }
 
@@ -149,9 +164,9 @@
 
   .filter-by-header {
     width: 100%;
-    background-color: var(--secondary-clr);
+    background-color: white;
     padding: 5px;
-    color: var(--paragraph-text-clr);
+    color: var(--darker-blue-primary-nav-transparent);
   }
 
   .filter-links-wrapper {
@@ -161,7 +176,6 @@
 
   .filter-links {
     padding: 5px;
-    color: var(--primary-clr);
     text-decoration: none;
     font-family: var(--Inter);
   }
@@ -181,15 +195,16 @@
     width: 100%;
     border: none;
     background-color: var(--primary-clr);
-    color: var(--paragraph-text-clr);
+    color: white;
     padding-block: 10px;
-    padding-inline-end: 1.9rem;
+    padding-inline: 10px 1.9rem;
     font-family: var(--Inter);
+    outline: none;
   }
 
   
   #rosterSearchField::placeholder {
-    color: var(--paragraph-text-clr);
+    color: white;
     font-family: var(--Inter);
   }
 
@@ -202,7 +217,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 34%;
+    right: 36%;
     cursor: pointer;
     color: var(--frame-clr);
   }
@@ -217,22 +232,18 @@
     border: none;
     background-color: var(--primary-clr);
     color: var(--paragraph-text-clr);
-    padding-block: 10px;
-    padding-inline: var(--input-text-placeholder-padding);
-    font-family: var(--Inter);
+    font-weight: bold;
+    padding-block: 7px;
+    padding-inline: 30px;
+    font-family: var(--ff-Jaldi);
+    cursor: pointer;
   }
 
   .filter-btn:hover {
-    cursor: pointer;
-    color: var(--paragraph-text-clr);
-    background-color: var(--secondary-clr);
     transition: linear 0.2s;    
   } 
   
   .filter-btn:focus {
-    cursor: pointer;
-    color: var(--paragraph-text-clr);
-    background-color: var(--secondary-clr);
     transition: linear 0.2s;
   }
 
@@ -246,7 +257,6 @@
     padding-bottom: var(--section-padding-bottom);
     width: 100%;
     height: fit-content;
-    display: grid;
   }
 
   
@@ -263,7 +273,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 25px;
     flex-wrap: wrap;
   }
@@ -275,8 +285,8 @@
   }
   
   .roster-img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 
@@ -285,25 +295,25 @@
   }
   
   .seacrh-results {
-    font-family: var(--Karla);
+    font-family: var(--ff-Jaldi);
     margin-top: -1px; /* Prevent double borders */
     font-size: 12px;
     display: grid;
     place-items: center;
     text-decoration: none;
-    transition: linear 1s;
+    transition: linear 0.5s;
     animation-name: search-results-animation;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-direction: forwards;
   }
 
   .seacrh-results:focus {
-    transition: linear 1s;
+    transition: linear 0.5s;
     transform: translateY(-10px);
   }
 
   .seacrh-results:hover {
-    transition: linear 1s;
+    transition: linear 0.5s;
     transform: translateY(-10px);
   }
 
@@ -311,8 +321,10 @@
     width: 100%;
     text-align: center;
     padding: 3px;
-    background-color: var(--frame-clr);
-    color: var(--primary-clr);
+    font-size: 14px;
+    background-color: var(--darker-blue-primary-nav-transparent);
+    color: white;
+    font-family: var(--ff-Jaldi);
   }
 
   @keyframes search-results-animation {
