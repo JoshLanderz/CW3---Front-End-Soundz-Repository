@@ -1656,6 +1656,21 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     padding: 0;
     display: grid;
     gap: 10px;
+    animation-name: listCpy;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes listCpy {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .fes-sel-btn-1, .fes-sel-btn-2 {
@@ -1690,11 +1705,13 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     margin: 0;
     padding: 0;
     position: relative;
+    border-radius: 5px;
 }
 
 
 #ul2 li {
     padding: 0px;
+    border-radius: 5px;
 }
 
 .frontend-soundz-playlist-list-element-content-wrapper {
@@ -1751,21 +1768,6 @@ yhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     position: relative;
     width: 100%;
     overflow: hidden;
-}
-
-.frontend-soundz-playlist-list-element::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.5;
-    z-index: -1;
-    width: 100%;  /* Covers a quarter of the width */
-    background-image: url('Images/Song Images/Bodaisaffa Music - Against the Wall.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .frontend-soundz-playlist-list-element-song-details-wrapper {
