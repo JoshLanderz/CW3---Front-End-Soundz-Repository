@@ -34,7 +34,7 @@ const recMottos = document.getElementById(".motto-text");
   function toggleSelection(buttonId) {
     let fesListBlock1 = document.getElementById("ul1");
     let fesListBlock2 = document.getElementById("ul2");
-    let fesListBlock1Li = document.getElementById("ul2 li")
+    let fesListBlock1Li = document.getElementById("ul2 li");
 
     // Clear any previous disabled states
     document.getElementById("fes-sel-btn-1").disabled = false;
@@ -42,13 +42,13 @@ const recMottos = document.getElementById(".motto-text");
 
     // Toggle based on clicked button
     if (buttonId === "fes-sel-btn-1") {
-        fesListBlock1.style.display = "block";
+        fesListBlock1.style.display = "grid";
         fesListBlock2.style.display = "none";
         document.getElementById("fes-sel-btn-2").disabled = false;
         document.getElementById("fes-sel-btn-1").disabled = true;
     } else if (buttonId === "fes-sel-btn-2") {
         fesListBlock1.style.display = "none";
-        fesListBlock2.style.display = "block";
+        fesListBlock2.style.display = "grid";
         document.getElementById("fes-sel-btn-1").disabled = false;
         document.getElementById("fes-sel-btn-2").disabled = true;
     } else {
