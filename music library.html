@@ -636,10 +636,9 @@ yImgSrc.src = xImgSrc.src;
 
     // Update mood text content
     yMoodWrapper.innerHTML = xMood.innerHTML;
-}
 
 
-yprogress.addEventListener("input", () => {
+    yprogress.addEventListener("input", () => {
 const newTime = (yprogress.value / 100) * ysong.duration;
 ysong.currentTime = newTime;
 });
@@ -657,6 +656,8 @@ yIcon.classList.add("fa-play");
 yprogress.value = 0;
 fesRemainingTime.textContent = "0:00";
 };
+}
+
 
 
         </script>
