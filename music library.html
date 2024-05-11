@@ -382,7 +382,7 @@ loginButton.addEventListener('click', handleLogin);
                     </ul>
 
                     <ul id="ul2" class="frontend-soundz-playlist-list" style="display: none;">
-                            <li class="frontend-soundz-playlist-list-element">
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Nico Anuch - Your Eyes.jpg" alt="">
@@ -408,8 +408,8 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="frontend-soundz-playlist-list-element">
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Lily Fitts - Buying Time.jpg" alt="">
@@ -435,8 +435,8 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="frontend-soundz-playlist-list-element">
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Billy Jesus - Could Have Been.png" alt="">
@@ -462,8 +462,8 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="frontend-soundz-playlist-list-element">
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Tiana Kocher - Daisies.jpg" alt="">
@@ -489,8 +489,8 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="frontend-soundz-playlist-list-element">
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Black Jade - Galaxy Stars.jpg" alt="">
@@ -516,8 +516,8 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="frontend-soundz-playlist-list-element">
+                        </li>
+                        <li class="frontend-soundz-playlist-list-element">
                                 <div class="frontend-soundz-playlist-list-element-content-wrapper">
                                     <div class="frontend-soundz-playlist-list-element-content-img-wrapper">
                                         <img class="frontend-soundz-playlist-list-element-content-img" src="Images/Song Images/Xan Griffin - Mountain Dirve.jpg" alt="">
@@ -544,7 +544,7 @@ loginButton.addEventListener('click', handleLogin);
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                        </li>
                             
                     </ul>
                     
@@ -553,8 +553,8 @@ loginButton.addEventListener('click', handleLogin);
         </div>
 
         <script>
-            /*Music Library*/
-            let yprogress = document.getElementById("fes-progress");
+/*Music Library*/
+let yprogress = document.getElementById("fes-progress");
 let ysong = document.getElementById("fes-song");
 let yIcon = document.getElementById("fes-Icon-0");
 let fesRemainingTime = document.getElementById("fes-remaining-time");
@@ -631,12 +631,10 @@ yImgSrc.src = xImgSrc.src;
     ySongTitle.textContent = xSongTitle.textContent;
 
     let yMoodWrapper = document.querySelector(".frontend-soundz-playlist-preview-mood-wrapper");
-    let xMood = document.querySelector("#fes-playlist-play-btn-" + index).closest('.frontend-soundz-playlist-list-element').querySelector('.frontend-soundz-playlist-list-element-preview-mood');
+    let xMood = document.querySelector("#fes-playlist-play-btn-" + index).closest('.frontend-soundz-playlist-list-element').querySelector('.frontend-soundz-playlist-preview-mood-wrapper');
 
     // Update mood text content
-    yMoodWrapper.textContent = xMood.textContent;
-    
-
+    yMoodWrapper.innerHTML = xMood.innerHTML;
 }
 
 
@@ -662,7 +660,55 @@ fesRemainingTime.textContent = "0:00";
 
         </script>
     </section>
+    <br><br>    <br><br>
+    <hr class="section-break-hr">
+    <br><br>
+    <section>
+        <div class="trending-genre1">
+            <img src="Images/Content/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" alt="Photo by Marcela Laskovski [DJ using mixer]" alt="">
+            <div class="overlay-text-wrapper">
+            <h1>TRENDING GENRE OF 2024 - ELECTRONIC DANCE MUSIC </h1>
+            <p class="overlay-text">
+                EDM, or Electronic Dance Music, has seen a significant surge in popularity in recent years, driven by several factors. One key reason for its trendiness is its widespread accessibility facilitated by digital platforms and streaming services. EDM's infectious beats and energetic rhythms resonate across a diverse audience, spanning various demographics and geographic regions. Its fusion of electronic elements with catchy melodies and pulsating basslines creates an immersive sonic experience that transcends cultural boundaries, making it a go-to choice for music lovers seeking high-energy tracks for both personal listening and social gatherings.
+                <br><br>
+                Moreover, EDM's presence in mainstream culture, particularly in pop music collaborations and at major music festivals, has propelled its visibility and influence. Renowned DJs and producers have become household names, further fueling interest in the genre. Additionally, the rise of social media platforms has enabled EDM artists to connect directly with fans, fostering a vibrant and engaged community around the music. This blend of accessibility, cross-genre appeal, and cultural significance has solidified EDM's position as a dominant force in contemporary music trends, shaping the soundtracks of parties, clubs, and everyday life for millions around the globe
+            </p>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <hr class="section-break-hr">
 
+    <section id="upcoming-list-section">
+        <h1 class="upcoming-list-title">FRONTEND SOUNDZ: UPCOMING ARTIST</h1>
+        <div class="upcoming-list-wrapper">
+            <img src="Images/Artists Images/Lily Fitts.jpg" alt="">
+            <div>
+            <h1 class="section-upc">LILLY FITTS</h1>
+            <p class="upcoming-list-text">
+                Lilly Fitts is an emerging independent folk artist known for her soulful vocals and introspective songwriting. With a style that blends elements of folk, indie, and Americana, Fitts crafts songs that resonate with authenticity and emotional depth. Drawing inspiration from personal experiences and the world around her, her music often explores themes of love, loss, resilience, and self-discovery.
+                <br><br>
+                Fitts gained traction in the music scene with the release of her debut album, garnering attention for her heartfelt lyrics and melodic compositions. Her evocative storytelling and ability to evoke raw emotions through her music have earned her a dedicated following and critical acclaim. As she continues to evolve as an artist, Lilly Fitts remains committed to creating music that speaks to the human experience, connecting with listeners on a profound level and leaving a lasting impact in the folk music landscape. 
+            </p>
+            </div>
+        </div>
+
+        <h1 class="upcoming-list-title">FRONTEND SOUNDZ: UPCOMING BAND</h1>
+        <div class="upcoming-list-wrapper">
+            <img src="Images/Bands Images/Diviners.png" alt="">
+            <div>
+            <h1 class="section-upc">DIVINERS</h1>
+            <p class="upcoming-list-text">
+                Diviners is an electronic music duo recognized for their captivating soundscapes and uplifting melodies, often featured on the renowned NoCopyrightSounds (NCS) platform. Comprising of two talented producers, Diviners has established a distinctive musical identity characterized by their fusion of melodic house, future bass, and EDM elements. Their tracks are renowned for their infectious energy, emotive chord progressions, and memorable hooks, making them favorites among electronic music enthusiasts and content creators alike.
+                <br><br>
+                With a string of successful releases on NCS, Diviners has garnered widespread acclaim within the electronic music community. Their collaborations with various vocalists add an extra layer of depth and emotion to their music, further enhancing its appeal and accessibility. Whether it's anthemic festival bangers or soul-stirring ballads, Diviners consistently delivers high-quality productions that leave a lasting impression on listeners. As they continue to push boundaries and explore new sonic territories, Diviners remains a driving force in the electronic music scene, inspiring fans and fellow artists alike with their innovative approach and infectious enthusiasm.
+            </p>
+            </div>
+        </div>
+        <div></div>
+    </section>
+    <br><br><br>
+    <hr class="section-break-hr">
 </main>
 
 <section class="footer">
@@ -675,9 +721,9 @@ fesRemainingTime.textContent = "0:00";
         <div class="footer-col">
             <h4 class="footer-col-heading">Communities</h4>
             <ul class="footer-links-list">
-                <li class="footer-links"><a href="explore.html">Music Library</a></li>
-                <li class="footer-links"><a href="">Discord</a></li>
-                <li class="footer-links"><a href="#">About Us</a></li>
+                <li class="footer-links"><a href="music library.html">Music Library</a></li>
+                <li class="footer-links"><a href="https://discord.com/invite/m7R8XQ4s">Discord</a></li>
+                <li class="footer-links"><a href="about-us.html">About Us</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -695,10 +741,29 @@ fesRemainingTime.textContent = "0:00";
                 <p class="newsletter-text">
                     Subscribe to our newsletter for a monthly dose of news and updates about your favourite artists.
                 </p>
-                <form action="#">
+                <form action="mailto:someone@example.com" enctype="text/plain">
                     <input id="newsletterEl" type="email" placeholder="Your e-mail" required>
-                    <button type="text">SUBSCRIBE</button>
+                    <button class="email-button" type="submit" style="background-color:  var(--genre-edm-purple);">SUBSCRIBE</button>
                 </form>
+            </div>
+
+            <div class="" style="margin-top: 15px;">
+                <a target="_blank" href="https://open.spotify.com/artist/3tpxZOPwm3IFQo00wq6hNd?si=4BSyEF3FRVuic6n8JmSBFA" class="icon-button spotify">
+                    <i class="fab fa-spotify"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/lylekam/" class="icon-button instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="https://twitter.com/KamLyle" class="icon-button twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="" class="icon-button discord">
+                    <i class="fa-brands fa-discord"></i>
+                    <span></span>
+                </a>
             </div>
         </div>
     </div>
