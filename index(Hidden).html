@@ -74,12 +74,14 @@
 
      <div class="space" id="space">
         
+        <a href="index.html" draggable="false">
         <div class="logo-wrapper">
             <img class="logo" src="https://github.com/JoshLanderz19/CW3---Front-End-Soundz-Repository/blob/main/FrontEnd%20Soundz%20Logo.png?raw=true" alt="FrontEnd Soundz logo">
             <p class="logo-name">FrontEnd Soundz
                 <span class="logo-span" id="logo-span">It's more than music, it's a movement</span>
             </p>
         </div>
+        </a>
 
         <div class="navibar-menu-space">
             
@@ -395,9 +397,11 @@ loginButton.addEventListener('click', handleLogin);
                         passion for new sounds and hidden gems instead?</p>
         
                         <p class="fotn-card-one-text">Explore<span> Fresh on The Net</span> and unearth the hidden gems shaping the<br>future of sound.</p>
+
+                        <p class="fotn-card-one-text"><span>Trending Genre, FrontEnd Sound Of The Week, Upcoming Artist & Band</span></p>
                     </div>
         
-                    <div class="fotn-card-one-link-wrapper">
+                    <div class="fotn-card-one-link-wrapper" style="display: none;">
                        <a class="fotn-card-one-link" href="">Find Your Next Obsession</a>
                     </div>
         
@@ -433,7 +437,7 @@ loginButton.addEventListener('click', handleLogin);
                 <div class="fotn-card-three">
                 
                     <!--Background Album Image with (Absolute Positioning)-->
-                    <img src="Images/Song Images/L!FE - Whenever.jpg" class="fotn-card-img" alt="L!FE - Whenever | Album Cover by L!IFE">
+                    <img src="Images/Song Images/Diviners & Level 8 - Guide You Home.jpg" class="fotn-card-img" alt="L!FE - Whenever | Album Cover by L!IFE">
                     
                     <!--FrontEnd Sound of the Week Label with (Absolute Positioning)-->
                     <div class="fotn-card-label-wrapper">
@@ -442,21 +446,64 @@ loginButton.addEventListener('click', handleLogin);
  
                     <!--Music Play Button with (Absolute Positioning)-->
                     <div class="play-button-wrapper">
-                        <audio id="song" style="display: none;">
-                            <source src="Audio/L!FE - Whenever [Thematic].mp3" type="audio/mp3">
+                        <audio id="song" style="display: none;" autoplay="false">
+                            <source src="Audio/Diviners & Level 8 - Guide You Home [NCS Release].mp3" type="audio/mp3">
                         </audio>
                         <div class="player-box">
-                            <p class="player-box-song-name">L!FE - Whenever
-                            <div class="player-box-song-name-spans">
-                                <span>Chill</span>|
-                                <span>Upbeat</span>
+                            <p class="player-box-song-name" style="top: 15px">Diviners & Level 8 - Guide You Home
+                            <div class="player-box-song-name-spans" style="left: 365px; top: -40px; width: min-content;">
+                                <span>Thrilling</span>|
+                                <span>Bass</span>
                             </div>  
                             </p>
-                            <button onclick="playPause()" class="music-play-button"     id="play-btn">
+                            <button onclick="playPause()" class="music-play-button" id="play-btn">
                                 <i class="fa fa-play" id="playIcon"></i>
                             </button>
                             <input type="range" value="0" id="progress">
+
+                            <p class="remainingTime" id="remainingTime" style="display: none;">2:59</p>
                         </div>
+                        <script>
+                            //Fresh On The Net - Play Button (Do not edit this button)
+let progress = document.getElementById("progress");
+let song = document.getElementById("song");
+let playIcon = document.getElementById("playIcon");
+
+let rTime = document.getElementById("rTime");
+
+song.volume = 0;
+song.onloadedmetadata = function(){
+    song.pause();
+    progress.max = song.duration;
+    progress.value = song.currentTime;
+}
+
+function playPause(){
+    song.volume = 1;
+    if(playIcon.classList.contains("fa-pause")){
+        song.pause();
+        playIcon.classList.remove("fa-pause");
+        playIcon.classList.add("fa-play");
+    } else {
+        song.play();
+        playIcon.classList.add("fa-pause");
+        playIcon.classList.remove("fa-play");
+    }
+}
+
+if(song.play()){
+  setInterval(()=>{
+      progress.value = song.currentTime;
+  },500);
+}
+
+progress.onchange = function(){
+    song.play();
+    song.currentTime = progress.value;
+    playIcon.classList.add("fa-pause");
+    playIcon.classList.remove("fa-play");
+}
+                        </script>
                     </div>
                 </div>
         
@@ -748,43 +795,6 @@ loginButton.addEventListener('click', handleLogin);
         </div>
 
             <script>
-                //Fresh On The Net - Play Button (Do not edit this button)
-let progress = document.getElementById("progress");
-let song = document.getElementById("song");
-let playIcon = document.getElementById("playIcon");
-
-let rTime = document.getElementById("rTime");
-
-song.onloadedmetadata = function(){
-    song.pause();
-    progress.max = song.duration;
-    progress.value = song.currentTime;
-}
-
-function playPause(){
-    if(playIcon.classList.contains("fa-pause")){
-        song.pause();
-        playIcon.classList.remove("fa-pause");
-        playIcon.classList.add("fa-play");
-    } else {
-        song.play();
-        playIcon.classList.add("fa-pause");
-        playIcon.classList.remove("fa-play");
-    }
-}
-
-if(song.play()){
-  setInterval(()=>{
-      progress.value = song.currentTime;
-  },500);
-}
-
-progress.onchange = function(){
-    song.play();
-    song.currentTime = progress.value;
-    playIcon.classList.add("fa-pause");
-    playIcon.classList.remove("fa-play");
-}
                 // Select all curated genres album wrappers
 const curatedGenreAlbums = document.querySelectorAll(".curated-genres-album-wrapper");
 
@@ -892,7 +902,7 @@ curatedGenreAlbums.forEach(album => {
             <p>Read more on how these evolving categories have organized and influenced musical expression throughout history.
             </p>
         </div> 
-        <a href="explore.html" id="button1">READ MORE</a href="explore.html"> 
+        <a href="explore.html#history_of_genres" id="button1">READ MORE</a> 
     </div> 
  
   <div class="card">
@@ -911,7 +921,7 @@ curatedGenreAlbums.forEach(album => {
             <p> follow artist profiles and find upcoming shows, ticket prices and venues!</p>
         </div>
        
-        <a id="button2" href="explore.html">Touring Dates & More</a>
+        <a id="button2" disabled>Touring Dates & More</a>
         <p style="color:rgba(10, 10, 125, 0.766); margin-top: 20px;">Coming Soon! 2025</p>
      
         <!--A tags: Type (a) then tab--> 
@@ -920,11 +930,11 @@ curatedGenreAlbums.forEach(album => {
  <div class="card">
       <h2>Collaborate with The Artists Themselves</h2>
       <div class="p-wrapper">
-        <p>Unleash your creative potential and collaborate with fellow artists in our vibrant <span style="color:rgba(10, 10, 125, 0.766); margin-top: 20px;">Discord</span> community.</p>
+        <p>Unleash your creative potential and collaborate with fellow artists in our vibrant <span style="color:rgba(10, 10, 125, 0.766); margin-top: 20px;"><b>Discord</b></span> community.</p>
         <p>
         Connect with musicians, creators, and artists across disciplines, find collaborators, share your work, and push your creative boundaries in an inspiring and supportive environment!</p>
       </div>
-    <a id="button3" href="explore.html">Collaborate</a>
+    <a id="button3" href="https://discord.com/invite/m7R8XQ4s" target="_blank">Collaborate</a>
 </div>
  
  <div class="card">
@@ -945,9 +955,9 @@ curatedGenreAlbums.forEach(album => {
         <div class="footer-col">
             <h4 class="footer-col-heading">Communities</h4>
             <ul class="footer-links-list">
-                <li class="footer-links"><a href="explore.html">Music Library</a></li>
-                <li class="footer-links"><a href="">Discord</a></li>
-                <li class="footer-links"><a href="#">About Us</a></li>
+                <li class="footer-links"><a href="music library.html">Music Library</a></li>
+                <li class="footer-links"><a href="https://discord.com/invite/m7R8XQ4s">Discord</a></li>
+                <li class="footer-links"><a href="about-us.html">About Us</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -965,10 +975,29 @@ curatedGenreAlbums.forEach(album => {
                 <p class="newsletter-text">
                     Subscribe to our newsletter for a monthly dose of news and updates about your favourite artists.
                 </p>
-                <form action="#">
+                <form action="mailto:someone@example.com" enctype="text/plain">
                     <input id="newsletterEl" type="email" placeholder="Your e-mail" required>
-                    <button type="text">SUBSCRIBE</button>
+                    <button class="email-button" type="submit" style="background-color:  var(--genre-edm-purple);">SUBSCRIBE</button>
                 </form>
+            </div>
+
+            <div class="" style="margin-top: 15px;">
+                <a target="_blank" href="https://open.spotify.com/artist/3tpxZOPwm3IFQo00wq6hNd?si=4BSyEF3FRVuic6n8JmSBFA" class="icon-button spotify">
+                    <i class="fab fa-spotify"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/lylekam/" class="icon-button instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="https://twitter.com/KamLyle" class="icon-button twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span></span>
+                </a>
+                <a target="_blank" href="" class="icon-button discord">
+                    <i class="fa-brands fa-discord"></i>
+                    <span></span>
+                </a>
             </div>
         </div>
     </div>
